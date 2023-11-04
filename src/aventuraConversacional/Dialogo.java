@@ -7,6 +7,9 @@ public class Dialogo {
 	
 	
 	public static String formatearTexto(String[] textos) {
+		// formatearTexto(textos) -> String
+		// Dado un array de Strings, devuelve un String con el texto formateado en una caja.
+
 		int anchoMaximo = 70; // Ancho máximo de la caja
 		StringBuilder resultado = new StringBuilder();
 		String textoBorde = bordeHorizontal('=', anchoMaximo); // Borde superior e inferior
@@ -25,6 +28,9 @@ public class Dialogo {
 	}
 
 	public static String centrarTexto(String texto, int anchoMaximo) {
+		// centrarTexto(texto, maxWidth) -> String
+		// Dado un texto y un ancho máximo, devuelve el texto centrado en una caja de ancho 
+
 		StringBuilder resultado = new StringBuilder();
 		int espacios = (anchoMaximo - texto.length()) / 2;
 
@@ -43,6 +49,9 @@ public class Dialogo {
 	}
 
 	public static String[] ajustarLineasTexto(String texto, int anchoMaximo) {
+		// ajustarLineasTexto(texto, maxWidth) -> String[]
+		// Dado un texto y un ancho máximo, devuelve un array de lineas ajustadas al ancho máximo.
+
 		StringBuilder line = new StringBuilder("");
 		List<String> lineas = new ArrayList<String>();
 
@@ -61,6 +70,10 @@ public class Dialogo {
 	}
 
 	public static String bordeHorizontal(char caracterBorde, int anchoMaximo) {
+		// bordeHorizontal(caracterBorde, anchoMaximo) -> String
+		// Dado un carácter y un ancho máximo, devuelve un String con el carácter repetido anchoMaximo veces.
+
+		// Borde superior e inferior
 		StringBuilder borde = new StringBuilder();
 		for (int i = 0; i < anchoMaximo; i++) {
 			borde.append(caracterBorde);

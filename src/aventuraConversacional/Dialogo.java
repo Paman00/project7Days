@@ -57,24 +57,24 @@ public class Dialogo {
 		return resultado.toString();
 	}
 
-	public static String centrarLinea(String texto, int anchoMaximo) {
-		// centrarLinea(texto, anchoMaximo) -> String
+	public static String centrarLinea(String linea, int anchoMaximo) {
+		// centrarLinea(linea, anchoMaximo) -> String
 		/*
-		 * Dado un texto y un ancho máximo, devuelve el texto centrado en una caja de
+		 * Dado un texto y un ancho máximo, devuelve el texto centrado en una linea de
 		 * ancho anchoMaximo.
 		 */
 
 		StringBuilder resultado = new StringBuilder();
-		int espacios = (anchoMaximo - texto.length()) / 2;
+		int espacios = (anchoMaximo - linea.length()) / 2;
 
 		for (int i = 0; i < espacios; i++) {
 			resultado.append(" ");
 		}
-		if ((anchoMaximo % 2 == 0 && texto.length() % 2 != 0) || (anchoMaximo % 2 == 1 && texto.length() % 2 == 0)) {
+		if ((anchoMaximo % 2 == 0 && linea.length() % 2 != 0) || (anchoMaximo % 2 == 1 && linea.length() % 2 == 0)) {
 			resultado.append(" ");
 		}
 
-		resultado.append(texto);
+		resultado.append(linea);
 
 		for (int i = 0; i < espacios; i++) {
 			resultado.append(" ");
@@ -95,7 +95,10 @@ public class Dialogo {
 
 		String words[] = texto.split(" ");
 		for (String word : words) {
-			if (line.length() + word.length() < anchoMaximo) {
+			if (word.equals("\n") || word.equals("\r") || word.equals("\r\n") || word.equals("\n\r")) {
+				lineas.add(line.toString());
+				line = new StringBuilder("");
+			} else if (line.length() + word.length() < anchoMaximo) {
 				line.append(word + " ");
 			} else {
 				lineas.add(line.toString());

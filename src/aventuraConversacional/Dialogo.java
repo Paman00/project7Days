@@ -4,6 +4,51 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Dialogo {
+	public static int anchoPredeterminado = 71;
+
+	public static final String ANSI_RESET = "\u001B[0m";
+
+	public static final String ANSI_GREEN = "\u001B[32m";
+	public static final String ANSI_RED = "\u001B[31m";
+
+	public static final String ANSI_BLACK_BACKGROUND = "\u001B[40m";
+
+	public static String dIntro() {
+		// TODO
+		StringBuilder message = new StringBuilder();
+		message.append(formatearTextoCaja(new String[] { "", "Hola jugador,",
+				"en esta aventura usted llevará a cabo una misión en el espacio mientras se enfrenta a numerosas dificultades ",
+				"" }));
+
+		return message.toString();
+	}
+
+	public static String m001() {
+		return centrarLinea("Irá su astronauta solo, ¿Cúal es su nombre?: ", anchoPredeterminado);
+	}
+
+	public static String e001() {
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_RED
+				+ formatearTextoCajaPersonalizada(
+						new String[] { "Error:", "Vaya, parece que tiene que empezar su nombre por una letra!", },
+						anchoPredeterminado, '=', '!')
+				+ ANSI_RESET).append(m001());
+		return message.toString();
+	}
+
+	public static String d001() {
+		StringBuilder message = new StringBuilder();
+
+		message.append(Recursos.casco()).append("\n")
+				.append(ANSI_BLACK_BACKGROUND
+						+ formatearTextoCaja(new String[] { "Año 2026",
+								"Hoy por fin es el día de la misión, el ser humano no pisa la luna desde el 72" })
+						+ ANSI_RESET)
+				.append(m001());
+		return message.toString();
+
+	}
 
 	public static String formatearTextoCaja(String[] textos) {
 		// formatearTextoCaja(textos) -> String
@@ -12,7 +57,7 @@ public class Dialogo {
 		 * caja.
 		 */
 
-		return formatearTextoCajaPersonalizada(textos, 71, '=', '|');
+		return formatearTextoCajaPersonalizada(textos, anchoPredeterminado, '=', '|');
 	}
 
 	public static String formatearTextoCajaPersonalizada(String[] textos, int anchoMaximo, char horizontalChar,

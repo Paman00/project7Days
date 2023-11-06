@@ -54,7 +54,7 @@ public class Dialogo {
 		StringBuilder message = new StringBuilder();
 
 		message.append(Recursos.casco()).append("\n")
-				.append(ANSI_BLACK_BACKGROUND
+				.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN
 						+ formatearTextoCaja(new String[] { "Año 2026",
 								"Hoy por fin es el día de la misión, el ser humano no pisa la luna desde el 72" })
 						+ ANSI_RESET)

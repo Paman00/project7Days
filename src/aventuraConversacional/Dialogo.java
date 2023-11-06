@@ -63,6 +63,16 @@ public class Dialogo {
 
 	}
 
+	public static String d002() {
+		// TODO
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN + formatearTextoCaja(
+				new String[] { "", " Vas a estar una semana fuera, 3 días de ida, uno en la luna y 3 de vuelta" })
+				+ ANSI_RESET).append(m001());
+		return message.toString();
+
+	}
+
 	public static String formatearTextoCaja(String[] textos) {
 		// formatearTextoCaja(textos) -> String
 		/*

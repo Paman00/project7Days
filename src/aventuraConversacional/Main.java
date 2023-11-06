@@ -5,7 +5,7 @@ public class Main {
 		Aventura.aIntro();
 		String nombre = Aventura.a001();
 		
-		
+		int opcion = Aventura.a002();
 		
 		Aventura.fin();
 	}

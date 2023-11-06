@@ -39,6 +39,15 @@ public class Dialogo {
 	public static String m001() {
 		return centrarLinea("Irá su astronauta solo, ¿Cúal es su nombre?: ", anchoPredeterminado);
 	}
+	
+	public static String m002() {
+		//TODO
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN + formatearTextoCaja(
+				new String[] { "1 - Bola de Nieve de Cristal", "2 - Destornillador", "3 - Pájaro de Madera" })
+				+ ANSI_RESET);
+		return message.toString();
+	}
 
 	public static String e001() {
 		StringBuilder message = new StringBuilder();
@@ -49,16 +58,24 @@ public class Dialogo {
 				+ ANSI_RESET).append(m001());
 		return message.toString();
 	}
+	
+	public static String e002() {
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_RED
+				+ formatearTextoCajaPersonalizada(
+						new String[] { "Error:", "Debe introducir el número corrrespondiente a la opción a escoger!", },
+						anchoPredeterminado, '=', '!')
+				+ ANSI_RESET).append(m002());
+		return message.toString();
+	}
 
 	public static String d001() {
 		StringBuilder message = new StringBuilder();
 
-		message.append(Recursos.casco()).append("\n")
-				.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN
-						+ formatearTextoCaja(new String[] { "Año 2026",
-								"Hoy por fin es el día de la misión, el ser humano no pisa la luna desde el 72" })
-						+ ANSI_RESET)
-				.append(m001());
+		message.append(Recursos.casco()).append("\n").append(ANSI_BLACK_BACKGROUND + ANSI_GREEN
+				+ formatearTextoCaja(new String[] { "Año 2026",
+						"Hoy por fin es el día de la misión, el ser humano no pisa la luna desde el 72" })
+				+ ANSI_RESET).append(m001());
 		return message.toString();
 
 	}
@@ -67,10 +84,18 @@ public class Dialogo {
 		// TODO
 		StringBuilder message = new StringBuilder();
 		message.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN + formatearTextoCaja(
-				new String[] { "", " Vas a estar una semana fuera, 3 días de ida, uno en la luna y 3 de vuelta" })
-				+ ANSI_RESET).append(m001());
+				new String[] { "", " vas a estar una semana fuera, 3 días de ida, uno en la luna y 3 de vuelta" })
+				+ ANSI_RESET);
 		return message.toString();
 
+	}
+	
+	public static String d003() {
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN + formatearTextoCaja(
+				new String[] { "Antes de empezar tu travesia podrás escoger un objeto", "entre los tres disponibles", "Escoge oon sabiduria"})
+				+ ANSI_RESET);
+		return message.toString();
 	}
 
 	public static String formatearTextoCaja(String[] textos) {

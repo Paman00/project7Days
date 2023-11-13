@@ -48,6 +48,45 @@ public class Dialogo {
 				+ ANSI_RESET);
 		return message.toString();
 	}
+	
+	public static String m003() {
+		//TODO
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN + formatearTextoCaja(
+				new String[] { "1 - Con prisa", "2 - Tranquilamente"})
+				+ ANSI_RESET);
+		return message.toString();
+	}
+	
+	public static String m004() {
+		return centrarLinea(ANSI_CYAN + "¿En qué parte se gasta más combustible?", anchoPredeterminado);
+	}
+	
+	public static String m005() {
+		//TODO
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN + formatearTextoCaja(
+				new String[] { "1 - En la salida a la atmósfera desde la Tierra", "2 - En el espacio","3 -  En el aterrizaje en la Luna","4 - En la salida a la atmósfera desde la Luna","5 - En el aterrijae en la Tierra"})
+				+ ANSI_RESET);
+		return message.toString();
+	}
+	
+	public static String m006() {
+		return centrarLinea(ANSI_CYAN + "La siguiente pregunta es, ¿llevas algún objeto que declarar?\r\n", anchoPredeterminado);
+	}
+	
+	public static String m007() {
+		//TODO
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN + formatearTextoCaja(
+				new String[] { "1 - Bola de Nieve de Cristal", "2 - Destornillador","3 -  Pájaro de Madera","4 - NO"})
+				+ ANSI_RESET);
+		return message.toString();
+	}
+	
+	public static String m008() {
+		return centrarLinea(ANSI_CYAN + "Ahora, ¿por qué estamos haciendo esta misión?", anchoPredeterminado);
+	}
 
 	public static String e001() {
 		StringBuilder message = new StringBuilder();
@@ -94,6 +133,26 @@ public class Dialogo {
 		StringBuilder message = new StringBuilder();
 		message.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN + formatearTextoCaja(
 				new String[] { "Antes de empezar tu travesia podrás escoger un objeto", "entre los tres disponibles", "Escoge oon sabiduria"})
+				+ ANSI_RESET);
+		return message.toString();
+	}
+	
+	public static String d004() {
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN + formatearTextoCaja(
+				new String[] { "05:35 AM", "Coges tus cosas, te metes en el coche y vas al lanzamiento","¿Cómo vas a ir?"})
+				+ ANSI_RESET);
+		return message.toString();
+	}
+	
+	public static String d005() {
+		return centrarLinea(ANSI_GREEN + "Llegas al lanzamiento ", anchoPredeterminado);
+	}
+	
+	public static String d006() {
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN + formatearTextoCaja(
+				new String[] { "Te preparas para el lanzamiento, antes de subir a la nave,", "tienes que pasar un test rápido de repaso,","eres un experto así que no es un problema para tí"})
 				+ ANSI_RESET);
 		return message.toString();
 	}

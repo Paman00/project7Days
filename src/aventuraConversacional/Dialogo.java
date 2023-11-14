@@ -39,53 +39,85 @@ public class Dialogo {
 	public static String m001() {
 		return centrarLinea("Irá su astronauta solo, ¿Cúal es su nombre?: ", anchoPredeterminado);
 	}
-	
+
 	public static String m002() {
-		//TODO
+		// TODO
 		StringBuilder message = new StringBuilder();
-		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN + formatearTextoCaja(
-				new String[] { "1 - Bola de Nieve de Cristal", "2 - Destornillador", "3 - Pájaro de Madera" })
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN
+				+ formatearTextoCaja(
+						new String[] { "1 - Bola de Nieve de Cristal", "2 - Destornillador", "3 - Pájaro de Madera" })
 				+ ANSI_RESET);
 		return message.toString();
 	}
-	
+
 	public static String m003() {
-		//TODO
+		// TODO
 		StringBuilder message = new StringBuilder();
-		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN + formatearTextoCaja(
-				new String[] { "1 - Con prisa", "2 - Tranquilamente"})
-				+ ANSI_RESET);
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN
+				+ formatearTextoCaja(new String[] { "1 - Con prisa", "2 - Tranquilamente" }) + ANSI_RESET);
 		return message.toString();
 	}
-	
+
 	public static String m004() {
 		return centrarLinea(ANSI_CYAN + "¿En qué parte se gasta más combustible?", anchoPredeterminado);
 	}
-	
+
 	public static String m005() {
-		//TODO
+		// TODO
 		StringBuilder message = new StringBuilder();
-		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN + formatearTextoCaja(
-				new String[] { "1 - En la salida a la atmósfera desde la Tierra", "2 - En el espacio","3 -  En el aterrizaje en la Luna","4 - En la salida a la atmósfera desde la Luna","5 - En el aterrijae en la Tierra"})
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN
+				+ formatearTextoCaja(new String[] { "1 - En la salida a la atmósfera desde la Tierra",
+						"2 - En el espacio", "3 -  En el aterrizaje en la Luna",
+						"4 - En la salida a la atmósfera desde la Luna", "5 - En el aterrijae en la Tierra" })
 				+ ANSI_RESET);
 		return message.toString();
 	}
-	
+
 	public static String m006() {
-		return centrarLinea(ANSI_CYAN + "La siguiente pregunta es, ¿llevas algún objeto que declarar?\r\n", anchoPredeterminado);
+		return centrarLinea(ANSI_CYAN + "La siguiente pregunta es, ¿llevas algún objeto que declarar?\r\n",
+				anchoPredeterminado);
 	}
-	
+
 	public static String m007() {
-		//TODO
+		// TODO
 		StringBuilder message = new StringBuilder();
-		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN + formatearTextoCaja(
-				new String[] { "1 - Bola de Nieve de Cristal", "2 - Destornillador","3 -  Pájaro de Madera","4 - NO"})
-				+ ANSI_RESET);
+		message.append(
+				ANSI_BLACK_BACKGROUND + ANSI_CYAN + formatearTextoCaja(new String[] { "1 - Bola de Nieve de Cristal",
+						"2 - Destornillador", "3 -  Pájaro de Madera", "4 - NO" }) + ANSI_RESET);
 		return message.toString();
 	}
-	
+
 	public static String m008() {
 		return centrarLinea(ANSI_CYAN + "Ahora, ¿por qué estamos haciendo esta misión?", anchoPredeterminado);
+	}
+
+	public static String m009() {
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_PURPLE
+				+ formatearTextoCaja(new String[] { ANSI_CYAN + "¿Estás bien? ¿Sabes por lo menos a dónde vas?" })
+				+ ANSI_RESET);
+		return message.toString();
+	}
+
+	public static String m010() {
+		// TODO
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN + formatearTextoCaja(new String[] { "1 - Marte", "2 - Saturno",
+				"3 - Urano", "4 - La Luna", "5 - Plutón", "6 - El Sol", "7 - Bogotá", "8 - Ferrol" }) + ANSI_RESET);
+		return message.toString();
+	}
+
+	public static String m011() {
+		return centrarLinea(ANSI_CYAN + "Todo correcto, queda poco para subir a la nave, quieres revisar algo?",
+				anchoPredeterminado);
+	}
+
+	public static String m012() {
+		// TODO
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_CYAN + formatearTextoCaja(new String[] { "1 - Revisar inventario",
+				"2 - Revisar Combustible", "3 - Revisar el plan con tu jefe", "4 - No" }) + ANSI_RESET);
+		return message.toString();
 	}
 
 	public static String e001() {
@@ -97,7 +129,7 @@ public class Dialogo {
 				+ ANSI_RESET).append(m001());
 		return message.toString();
 	}
-	
+
 	public static String e002() {
 		StringBuilder message = new StringBuilder();
 		message.append(ANSI_BLACK_BACKGROUND + ANSI_RED
@@ -128,32 +160,64 @@ public class Dialogo {
 		return message.toString();
 
 	}
-	
+
 	public static String d003() {
 		StringBuilder message = new StringBuilder();
-		message.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN + formatearTextoCaja(
-				new String[] { "Antes de empezar tu travesia podrás escoger un objeto", "entre los tres disponibles", "Escoge oon sabiduria"})
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN
+				+ formatearTextoCaja(new String[] { "Antes de empezar tu travesia podrás escoger un objeto",
+						"entre los tres disponibles", "Escoge oon sabiduria" })
 				+ ANSI_RESET);
 		return message.toString();
 	}
-	
+
 	public static String d004() {
 		StringBuilder message = new StringBuilder();
-		message.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN + formatearTextoCaja(
-				new String[] { "05:35 AM", "Coges tus cosas, te metes en el coche y vas al lanzamiento","¿Cómo vas a ir?"})
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN
+				+ formatearTextoCaja(new String[] { "05:35 AM",
+						"Coges tus cosas, te metes en el coche y vas al lanzamiento", "¿Cómo vas a ir?" })
 				+ ANSI_RESET);
 		return message.toString();
 	}
-	
+
 	public static String d005() {
 		return centrarLinea(ANSI_GREEN + "Llegas al lanzamiento ", anchoPredeterminado);
 	}
-	
+
 	public static String d006() {
 		StringBuilder message = new StringBuilder();
-		message.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN + formatearTextoCaja(
-				new String[] { "Te preparas para el lanzamiento, antes de subir a la nave,", "tienes que pasar un test rápido de repaso,","eres un experto así que no es un problema para tí"})
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_GREEN
+				+ formatearTextoCaja(new String[] { "Te preparas para el lanzamiento, antes de subir a la nave,",
+						"tienes que pasar un test rápido de repaso,",
+						"eres un experto así que no es un problema para tí" })
 				+ ANSI_RESET);
+		return message.toString();
+	}
+
+	public static String d007() {
+		return centrarLinea("Ibas a responder pero de repente la respuesta se esfume de tu mente", anchoPredeterminado);
+	}
+
+	public static String d008() {
+		// TODO
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_RED
+				+ formatearTextoCajaPersonalizada(new String[] { "No puede ser, llevo toda la vida esperando para esto",
+						"y se me ha olvidado que es lo que iba a hacer" }, anchoPredeterminado, '(', '!')
+				+ ANSI_RESET).append(m002());
+		return message.toString();
+	}
+
+	public static String d009() {
+		return centrarLinea("No respondes", anchoPredeterminado);
+	}
+
+	public static String d010() {
+		// TODO
+		StringBuilder message = new StringBuilder();
+		message.append(ANSI_BLACK_BACKGROUND + ANSI_RED
+				+ formatearTextoCajaPersonalizada(new String[] { "Venga eso por lo menos tengo que saberlo" },
+						anchoPredeterminado, '(', '!')
+				+ ANSI_RESET).append(m002());
 		return message.toString();
 	}
 

@@ -8,7 +8,7 @@ public class Aventura {
 	public static void aIntro() {
 		// TODO
 	}
-
+/*
 	public static String a001() {
 		System.out.println(Dialogo.d001());
 		String nombre = sc.nextLine();
@@ -37,7 +37,7 @@ public class Aventura {
 		}
 		return opcion;
 	}
-
+*/
 	public static void fin() {
 		sc.close();
 	}

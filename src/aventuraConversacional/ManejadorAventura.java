@@ -5,12 +5,11 @@ import java.util.Scanner;
 public class ManejadorAventura {
 	private static Scanner sc = new Scanner(System.in);
 
-	public static void iniciarAventura() {
-		obtenerStartInicio();
-		String nombre = obtenerNombreJugador();
-		String objeto = obtenerSeleccionObjeto(nombre);
+	public static void resetBuffer() {
+		sc.nextLine();
 	}
 
+	
 	public static void obtenerStartInicio() {
 		System.out.println(GeneradorDialogo.obtenerCajaIntroduccion());
 		System.out.println(Dialogo.centrarLineaPredeterminada("Presione START para inciar"));
@@ -18,7 +17,7 @@ public class ManejadorAventura {
 	}
 
 	public static String obtenerNombreJugador() {
-		System.out.println(Recursos.obtenerCasco());
+		System.out.println(Recursos.casco);
 		System.out.println(GeneradorDialogo.obtenerCajaInicio());
 		System.out.println(Dialogo.centrarLineaPredeterminada("Irá su astronauto solo, ¿Cúal es su nombre?: "));
 		String nombre = sc.nextLine();
@@ -35,15 +34,15 @@ public class ManejadorAventura {
 		System.out.println(Dialogo
 				.centrarLineaPredeterminada("Selecciona una de las herramientas que se presentara acontinuación:"));
 		System.out.println("1.");
-		System.out.println(Recursos.obtenerBola());
+		System.out.println(Recursos.bola);
 		System.out.println("Presione START para continuar");
 		sc.nextLine();
 		System.out.println("2.");
-		System.out.println(Recursos.obtenerDestornillador());
+		System.out.println(Recursos.destornillador);
 		System.out.println("Presione START para continuar");
 		sc.nextLine();
 		System.out.println("3.");
-		System.out.println(Recursos.obtenerPajaro());
+		System.out.println(Recursos.pajaro);
 		System.out.println("Presione START para continuar");
 		sc.nextLine();
 		System.out.println(Dialogo.centrarLineaPredeterminada("Ingrese 1, 2 o 3 para elegir un arma"));

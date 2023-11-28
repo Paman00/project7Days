@@ -34,6 +34,12 @@ public class Dialogo {
 		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(textoParaCaja, '=', '!');
 		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.RED);
 	}
+	
+	public static String cajaSeleccionarModoSalida() {
+		String[] textoParaCaja = {"05:35","Coges tus cosas, te metes en el coche y vas al lanzamiento"};
+		String textoEnCaja = FuncionesDialogo.formatearTextoCaja(textoParaCaja);
+		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.GREEN);
+	}
 
 	// public static String obtenerCajaR
 }

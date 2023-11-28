@@ -9,7 +9,7 @@ public class Main {
 		// Declaramos las funciones que vamos a usar
 		String nombre;
 		int opcionObjeto;
-		String objeto = null;
+		String[] inventario = new String[5];
 
 		// Damos la introducción al usuario y esperamos a que presione START
 		System.out.println(Dialogo.cajaIntroduccion());
@@ -37,8 +37,7 @@ public class Main {
 
 		// Damos cada uno de los objeto con un número, esperamos a que el usuario
 		// presione START entre cada uno
-		System.out.println(
-				FuncionesDialogo.centrarLinea("Selecciona una de las herramientas que se presentara a continuación:"));
+		System.out.println(FuncionesDialogo.centrarLinea("Selecciona una de las herramientas que se presentara a continuación:"));
 		System.out.println("1.");
 		System.out.println(Recursos.bola);
 		System.out.println(FuncionesDialogo.centrarLinea("Presione START para continuar"));
@@ -63,18 +62,30 @@ public class Main {
 			opcionObjeto = sc.nextInt();
 		}
 		// Según la opción, asignara a objeto la elección elegida
+
 		switch (opcionObjeto) {
 		case 1:
-			objeto = "bola";
+			inventario[0] = "bola";
 			break;
 		case 2:
-			objeto = "destornillador";
+			inventario[0] = "destornillador";
 			break;
 		case 3:
-			objeto = "pajaro";
+			inventario[0] = "pajaro";
 			break;
 		}
-		System.out.println(FuncionesDialogo.centrarLinea("Muy bien!, ha seleccionado " + objeto));
+		System.out.println(FuncionesDialogo.centrarLinea("Muy bien!, ha seleccionado " + inventario[0]));
+		
+		// Enseñamos la caja antes de pedir el objeto, y esperamos a que el usuario
+		// presione START
+		System.out.println(Dialogo.cajaSeleccionarModoSalida());
+		System.out.println(FuncionesDialogo.centrarLinea("Presione START para continuar"));
+		sc.nextLine();
+		//System.out.println(Recursos.coche);
+		System.out.println(FuncionesDialogo.centrarLinea("¿Cómo vas a ir?"));
+		System.out.println("1. Con prisa");
+		System.out.println("2. Tranquilamente");
+		
 	}
 
 	public static void resetBuffer() {

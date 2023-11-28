@@ -12,6 +12,7 @@ public class Main {
 		String[] inventario = new String[5];
 		int respeto = 5;
 		int contadorFallo = 0;
+		String objetoInventario = null;
 
 		// Damos la introducción al usuario y esperamos a que presione START
 		System.out.println(Dialogo.cajaIntroduccion());
@@ -41,15 +42,15 @@ public class Main {
 		// presione START entre cada uno
 		System.out.println(
 				FuncionesDialogo.centrarLinea("Selecciona una de las herramientas que se presentara a continuación:"));
-		System.out.println("1.");
+		System.out.println("1. Bola de Nieve de Cristal");
 		System.out.println(Recursos.bola);
 		System.out.println(FuncionesDialogo.centrarLinea("Presione START para continuar"));
 		sc.nextLine();
-		System.out.println("2.");
+		System.out.println("2. Destornillador");
 		System.out.println(Recursos.destornillador);
 		System.out.println(FuncionesDialogo.centrarLinea("Presione START para continuar"));
 		sc.nextLine();
-		System.out.println("3.");
+		System.out.println("3.Pájaro de Madera");
 		System.out.println(Recursos.pajaro);
 		System.out.println(FuncionesDialogo.centrarLinea("Presione START para continuar"));
 		sc.nextLine();
@@ -68,13 +69,13 @@ public class Main {
 
 		switch (opcion) {
 		case 1:
-			inventario[0] = "bola";
+			inventario[0] = "Bola de Nieve de Cristal";
 			break;
 		case 2:
-			inventario[0] = "destornillador";
+			inventario[0] = "Destornillador";
 			break;
 		case 3:
-			inventario[0] = "pajaro";
+			inventario[0] = "Pajaro de Madera";
 			break;
 		}
 
@@ -129,6 +130,9 @@ public class Main {
 		System.out.println("3. En el aterrizaje en la Luna ");
 		System.out.println("4. En la salida de la atmósfera de la Luna");
 		System.out.println("5. En el aterrizaje en la Tierra");
+		System.out.println(FuncionesDialogo.centrarLinea("Presione START para continuar"));
+		sc.nextLine();
+		System.out.println(FuncionesDialogo.centrarLinea("Ingrese 1, 2, 3, 4, 5 para elegir una respuesta"));
 		opcion = sc.nextInt();
 
 		while (opcion < 1 || opcion > 5) {
@@ -156,13 +160,43 @@ public class Main {
 		// Reiniciamos el valor de la variable usada para escoger las opciones
 		opcion = 0;
 
-		System.out.println(FuncionesDialogo.centrarLinea("¿Llevas algún objeto que declarar"));
-		System.out.println("1. En la salida de la atmósfera de la Tierra");
-		System.out.println("2. En el espacio");
-		System.out.println("3. En el aterrizaje en la Luna ");
-		System.out.println("4. En la salida de la atmósfera de la Luna");
-		System.out.println("5. En el aterrizaje en la Tierra");
+		System.out.println(FuncionesDialogo.centrarLinea("¿Llevas algún objeto que declarar?"));
+		System.out.println("1. Bola de Nieve de Cristal");
+		System.out.println("2. Destornillador");
+		System.out.println("3. Pájaro de Madera");
+		System.out.println("4. No");
+		System.out.println(FuncionesDialogo.centrarLinea("Presione START para continuar"));
+		sc.nextLine();
+		System.out.println(FuncionesDialogo.centrarLinea("Ingrese 1, 2 o 3 para elegir un arma"));
 		opcion = sc.nextInt();
+
+		if (opcion == 1) {
+			objetoInventario = "Bola de Nieve de Cristal";
+		} else if (opcion == 2) {
+			objetoInventario = "Destornillador";
+		} else if (opcion == 3) {
+			objetoInventario = "Pajaro de Madera";
+		}
+
+		boolean objetoEncontrado = false;
+
+		for (int i = 0; i < inventario.length; i++) {
+			if (objetoInventario.equals(inventario[i])) {
+				objetoEncontrado = true;
+				System.out.println(FuncionesDialogo.centrarLinea("(Revisa tu equipaje)"));
+				System.out.println(FuncionesDialogo.centrarLinea("Efectivamente, un " + inventario[i] + " todo correcto"));
+				break; // Si encuentra el objeto, sale del bucle
+			}
+		}
+		if (!objetoEncontrado) {
+			System.out.println(FuncionesDialogo.centrarLinea("(Revisa tu equipaje)"));
+			System.out.println(FuncionesDialogo.centrarLinea("Eh… señor esto no es un " + objetoInventario + ", es un " + inventario[0]));
+			respeto--;
+		}
+		
+		System.out.println(FuncionesDialogo.agregarColor(FuncionesDialogo.centrarLinea("Proxima pregunata, ¿por qué estamos haciendo esta misión?"), Recursos.RED ));
+		
+
 	}
 
 	public static void resetBuffer() {

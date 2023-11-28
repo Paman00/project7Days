@@ -10,6 +10,8 @@ public class Main {
 		String nombre;
 		int opcion;
 		String[] inventario = new String[5];
+		int respeto = 5;
+		int contadorFallo = 0;
 
 		// Damos la introducción al usuario y esperamos a que presione START
 		System.out.println(Dialogo.cajaIntroduccion());
@@ -86,7 +88,7 @@ public class Main {
 		System.out.println(Dialogo.cajaSeleccionarModoSalida());
 		System.out.println(FuncionesDialogo.centrarLinea("Presione START para continuar"));
 		sc.nextLine();
-		// System.out.println(Recursos.coche);
+		System.out.println(Recursos.coche);
 		System.out.println(FuncionesDialogo.centrarLinea("¿Cómo vas a ir?"));
 		System.out.println("1. Con prisa");
 		System.out.println("2. Tranquilamente");
@@ -108,8 +110,6 @@ public class Main {
 		} else if (opcion == 2) {
 			System.out.println(FuncionesDialogo.centrarLinea("Llegas a las 06:25"));
 		}
-		// Reiniciamos el valor de la variable usada para escoger las opciones
-		opcion = 0;
 
 		System.out.println(FuncionesDialogo.centrarLinea("Llegas al lanzamiento"));
 		System.out.println(FuncionesDialogo.centrarLinea("Presione START para continuar"));
@@ -121,6 +121,8 @@ public class Main {
 		System.out.println(Dialogo.cajaLanzamiento());
 		System.out.println(FuncionesDialogo.centrarLinea("Presione START para continuar"));
 		sc.nextLine();
+		// Reiniciamos el valor de la variable usada para escoger las opciones
+		opcion = 0;
 		System.out.println(FuncionesDialogo.centrarLinea("¿En qué parte se gasta más combustible?"));
 		System.out.println("1. En la salida de la atmósfera de la Tierra");
 		System.out.println("2. En el espacio");
@@ -133,6 +135,10 @@ public class Main {
 			System.out.println(Dialogo.cajaErrorRespeto1());
 			System.out.println(FuncionesDialogo.centrarLinea("Ingrese 1, 2, 3, 4 o 5 para elegir la respuesta"));
 			opcion = sc.nextInt();
+			contadorFallo++;
+			if (contadorFallo == 1) {
+				respeto--;
+			}
 		}
 
 		while (opcion != 5) {
@@ -140,9 +146,23 @@ public class Main {
 			System.out.println(FuncionesDialogo.centrarLinea("Ingrese 1, 2, 3, 4 o 5 para elegir la respuesta"));
 			opcion = sc.nextInt();
 		}
+
+		System.out.println(FuncionesDialogo.centrarLinea(
+				"Eso, la fuerza de la gravedad hace que se queme mucho combustible para poder salir\r\n" + ""));
+
+		System.out.println(FuncionesDialogo.centrarLinea("Presione START para continuar"));
+		sc.nextLine();
 		
-		System.out.println(FuncionesDialogo.centrarLinea("Eso, la fuerza de la gravedad hace que se queme mucho combustible para poder salir\r\n"+ ""));
+		// Reiniciamos el valor de la variable usada para escoger las opciones
+		opcion = 0;
 		
+		System.out.println(FuncionesDialogo.centrarLinea("¿Llevas algún objeto que declarar"));
+		System.out.println("1. En la salida de la atmósfera de la Tierra");
+		System.out.println("2. En el espacio");
+		System.out.println("3. En el aterrizaje en la Luna ");
+		System.out.println("4. En la salida de la atmósfera de la Luna");
+		System.out.println("5. En el aterrizaje en la Tierra");
+		opcion = sc.nextInt();
 	}
 
 	public static void resetBuffer() {

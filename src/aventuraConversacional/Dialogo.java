@@ -34,11 +34,36 @@ public class Dialogo {
 		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(textoParaCaja, '=', '!');
 		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.RED);
 	}
-	
+
 	public static String cajaSeleccionarModoSalida() {
-		String[] textoParaCaja = {"05:35","Coges tus cosas, te metes en el coche y vas al lanzamiento"};
+		String[] textoParaCaja = { "05:35", "Coges tus cosas, te metes en el coche y vas al lanzamiento" };
 		String textoEnCaja = FuncionesDialogo.formatearTextoCaja(textoParaCaja);
 		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.GREEN);
+	}
+
+	public static String cajaLanzamiento() {
+		String[] textoParaCaja = { "Te preparas para el lanzamiento, antes de subir a la nave,",
+				"tienes que pasar un test rápido de repaso, eres un experto 	así que no es un problema para ti" };
+		String textoEnCaja = FuncionesDialogo.formatearTextoCaja(textoParaCaja);
+		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.GREEN);
+	}
+	
+	public static String cajaErrorSeleccionarModo() {
+		String[] textoParaCaja = { "Debe de elegir un numero:", "1 o 2" };
+		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(textoParaCaja, '=', '!');
+		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.RED);
+	}
+	
+	public static String cajaFallorespeto1() {
+		String[] textoParaCaja = { "Ups, parece que aún no estás muy despierto, esa no es la rspuesta correcta,","venga, vuelve a intentarlo, te la sabes." };
+		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(textoParaCaja, '=', '!');
+		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.RED);
+	}
+	
+	public static String cajaErrorRespeto1() {
+		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2, 3, 4, 5 o 6" };
+		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(textoParaCaja, '=', '!');
+		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.RED);
 	}
 
 	// public static String obtenerCajaR

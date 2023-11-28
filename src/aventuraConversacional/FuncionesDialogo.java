@@ -62,7 +62,6 @@ public class FuncionesDialogo {
 		return resultado.toString();
 	}
 
-	// TODO:
 	public static String centrarTexto(String texto) {
 		return centrarTextoPersonalizado(texto, anchoPredeterminado);
 	}

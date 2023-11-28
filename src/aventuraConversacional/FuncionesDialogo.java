@@ -62,6 +62,22 @@ public class FuncionesDialogo {
 		return resultado.toString();
 	}
 
+	// TODO:
+	public static String centrarTexto(String texto) {
+		return centrarTextoPersonalizado(texto, anchoPredeterminado);
+	}
+	public static String centrarTextoPersonalizado(String texto, int anchoMaximo) {
+		String[] lineas = ajustarLineas(texto, anchoMaximo);
+		String resultado = "";
+		for(int i = 0; i<lineas.length; i++) {
+			
+			resultado += centrarLineaPersonalizada(lineas[i], anchoMaximo);
+			if(i!=lineas.length-1) {
+				resultado+="\n";
+			}
+		}
+		return resultado;
+	}
 	public static String centrarLinea(String linea) {
 		// centrarLineaPredeterminada(linea) -> String
 		return centrarLineaPersonalizada(linea, anchoPredeterminado);

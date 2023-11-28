@@ -147,15 +147,15 @@ public class Main {
 			opcion = sc.nextInt();
 		}
 
-		System.out.println(FuncionesDialogo.centrarLinea(
-				"Eso, la fuerza de la gravedad hace que se queme mucho combustible para poder salir\r\n" + ""));
+		System.out.println(FuncionesDialogo
+				.centrarTexto("Eso, la fuerza de la gravedad hace que se queme mucho combustible para poder salir"));
 
 		System.out.println(FuncionesDialogo.centrarLinea("Presione START para continuar"));
 		sc.nextLine();
-		
+
 		// Reiniciamos el valor de la variable usada para escoger las opciones
 		opcion = 0;
-		
+
 		System.out.println(FuncionesDialogo.centrarLinea("¿Llevas algún objeto que declarar"));
 		System.out.println("1. En la salida de la atmósfera de la Tierra");
 		System.out.println("2. En el espacio");

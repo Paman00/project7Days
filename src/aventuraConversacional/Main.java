@@ -2,6 +2,10 @@ package aventuraConversacional;
 
 import java.util.Scanner;
 
+import static aventuraConversacional.FuncionesDialogo.centrarLinea;
+import static aventuraConversacional.FuncionesDialogo.centrarTexto;
+import static aventuraConversacional.FuncionesDialogo.agregarColor;
+
 public class Main {
 	private static Scanner sc = new Scanner(System.in);
 
@@ -74,7 +78,7 @@ public class Main {
 			inventario[0] = "Destornillador";
 			break;
 		case 3:
-			inventario[0] = "Pajaro de Madera";
+			inventario[0] = "Pájaro de Madera";
 			break;
 		}
 
@@ -103,19 +107,19 @@ public class Main {
 			opcion = sc.nextInt();
 		}
 
+		// Reset de Buffer por error
+		resetBuffer();
+		
+		System.out.println(Recursos.naveAntesDeDespegar);
 		if (opcion == 1) {
 			System.out.println(centrarLinea("Llegas a las 06:00"));
 		} else if (opcion == 2) {
 			System.out.println(centrarLinea("Llegas a las 06:25"));
 		}
-
 		System.out.println(centrarLinea("Llegas al lanzamiento"));
 		System.out.println(centrarLinea("Presione START para continuar"));
 		sc.nextLine();
-		System.out.println(Recursos.naveAntesDeDespegar);
-
-		System.out.println(centrarLinea("Presione START para continuar"));
-		sc.nextLine();
+		
 		System.out.println(Dialogo.cajaLanzamiento());
 		System.out.println(centrarLinea("Presione START para continuar"));
 		sc.nextLine();
@@ -146,8 +150,7 @@ public class Main {
 			opcion = sc.nextInt();
 		}
 
-		System.out.println(FuncionesDialogo
-				.centrarTexto("Eso, la fuerza de la gravedad hace que se queme mucho combustible para poder salir"));
+		System.out.println(centrarTexto("Eso, la fuerza de la gravedad hace que se queme mucho combustible para poder salir"));
 
 		// Reiniciamos el valor de la variable usada para escoger las opciones
 		opcion = 0;
@@ -165,7 +168,7 @@ public class Main {
 		} else if (opcion == 2) {
 			objetoInventario = "Destornillador";
 		} else if (opcion == 3) {
-			objetoInventario = "Pajaro de Madera";
+			objetoInventario = "Pájaro de Madera";
 		}
 
 		boolean objetoEncontrado = false;
@@ -186,24 +189,13 @@ public class Main {
 		}
 
 		System.out.println(
-				agregarColor(centrarLinea("Proxima pregunata, ¿por qué estamos haciendo esta misión?"), Recursos.RED));
+				agregarColor(centrarLinea("Proxima pregunta, ¿por qué estamos haciendo esta misión?"), Recursos.RED));
 
 	}
-
-	public static String agregarColor(String mensaje, String color) {
-		return FuncionesDialogo.agregarColor(mensaje, color);
-	}
-
-	public static String centrarLinea(String linea) {
-		return FuncionesDialogo.centrarLinea(linea);
-	}
-
-	public static String centrarTexto(String texto) {
-		return FuncionesDialogo.centrarTexto(texto);
-	}
-
+	/**
+	 * Reinicia el buffer de Scanner para evitar errores con nextLine()
+	 */
 	public static void resetBuffer() {
 		sc.nextLine();
 	}
-
 }

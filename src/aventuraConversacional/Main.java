@@ -109,7 +109,7 @@ public class Main {
 
 		// Reset de Buffer por error
 		resetBuffer();
-		
+
 		System.out.println(Recursos.naveAntesDeDespegar);
 		if (opcion == 1) {
 			System.out.println(centrarLinea("Llegas a las 06:00"));
@@ -119,7 +119,7 @@ public class Main {
 		System.out.println(centrarLinea("Llegas al lanzamiento"));
 		System.out.println(centrarLinea("Presione START para continuar"));
 		sc.nextLine();
-		
+
 		System.out.println(Dialogo.cajaLanzamiento());
 		System.out.println(centrarLinea("Presione START para continuar"));
 		sc.nextLine();
@@ -150,7 +150,8 @@ public class Main {
 			opcion = sc.nextInt();
 		}
 
-		System.out.println(centrarTexto("Eso, la fuerza de la gravedad hace que se queme mucho combustible para poder salir"));
+		System.out.println(
+				centrarTexto("Eso, la fuerza de la gravedad hace que se queme mucho combustible para poder salir"));
 
 		// Reiniciamos el valor de la variable usada para escoger las opciones
 		opcion = 0;
@@ -192,6 +193,7 @@ public class Main {
 				agregarColor(centrarLinea("Proxima pregunta, ¿por qué estamos haciendo esta misión?"), Recursos.RED));
 
 	}
+
 	/**
 	 * Reinicia el buffer de Scanner para evitar errores con nextLine()
 	 */

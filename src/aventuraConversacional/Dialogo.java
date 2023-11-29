@@ -1,7 +1,14 @@
 package aventuraConversacional;
 
 public class Dialogo {
+	/* Modelos */
+	// TODO
+	public static String modeloCajaBasico(String[] texto) {
+		String textoEnCaja = FuncionesDialogo.formatearTextoCaja(texto);
+		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.GREEN);
+	}
 
+	/* Cajas de Texto */
 	public static String cajaIntroduccion() {
 		String[] textoParaCaja = { "¡Hola jugador!",
 				"en esta aventura usted llevará a caba una misión en el espacio mientras se enfrenta a numerosas dificultades" };
@@ -47,19 +54,20 @@ public class Dialogo {
 		String textoEnCaja = FuncionesDialogo.formatearTextoCaja(textoParaCaja);
 		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.GREEN);
 	}
-	
+
 	public static String cajaErrorSeleccionarModo() {
 		String[] textoParaCaja = { "Debe de elegir un numero:", "1 o 2" };
 		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(textoParaCaja, '=', '!');
 		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.RED);
 	}
-	
+
 	public static String cajaFallorespeto1() {
-		String[] textoParaCaja = { "Ups, parece que aún no estás muy despierto, esa no es la rspuesta correcta,","venga, vuelve a intentarlo, te la sabes." };
+		String[] textoParaCaja = { "Ups, parece que aún no estás muy despierto, esa no es la respuesta correcta,",
+				"venga, vuelve a intentarlo, te la sabes." };
 		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(textoParaCaja, '=', '!');
 		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.RED);
 	}
-	
+
 	public static String cajaErrorRespeto1() {
 		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2, 3, 4, 5 o 6" };
 		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(textoParaCaja, '=', '!');

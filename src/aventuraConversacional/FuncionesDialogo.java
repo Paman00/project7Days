@@ -7,9 +7,10 @@ public class FuncionesDialogo {
 	public static int anchoPredeterminado = 71;
 
 	/**
-	 * Agrega color a un mensaje de texto 
+	 * Agrega color a un mensaje de texto
+	 * 
 	 * @param mensaje texto a colorear
-	 * @param color color a aplicar, usar las constantes de la clase Recursos
+	 * @param color   color a aplicar, usar las constantes de la clase Recursos
 	 * @return texto coloreado
 	 */
 	public static String agregarColor(String mensaje, String color) {
@@ -17,8 +18,11 @@ public class FuncionesDialogo {
 	}
 
 	/**
-	 * Formatea un texto en una caja de texto con el ancho predeterminado y los bordes predeterminados ('=' horizontal, '|' vertical)
-	 * @param textos texto a formatear, cada elemento del array es una linea, se ajusta automáticamente
+	 * Formatea un texto en una caja de texto con el ancho predeterminado y los
+	 * bordes predeterminados ('=' horizontal, '|' vertical)
+	 * 
+	 * @param textos texto a formatear, cada elemento del array es una linea, se
+	 *               ajusta automáticamente
 	 * @return texto formateado en una caja predeterminada
 	 */
 	public static String formatearTextoCaja(String[] textos) {
@@ -26,11 +30,15 @@ public class FuncionesDialogo {
 	}
 
 	/**
-	 * Formatea un texto en una caja de texto con el ancho predeterminado y los bordes personalizados
-	 * @param textos texto a formatear, cada elemento del array es una linea, se ajusta automáticamente
+	 * Formatea un texto en una caja de texto con el ancho predeterminado y los
+	 * bordes personalizados
+	 * 
+	 * @param textos         texto a formatear, cada elemento del array es una
+	 *                       linea, se ajusta automáticamente
 	 * @param horizontalChar carácter a usar para el borde horizontal
-	 * @param verticalChar carácter a usar para el borde vertical
-	 * @return texto formateado en una caja de tamaño predeterminado con bordes personalizados
+	 * @param verticalChar   carácter a usar para el borde vertical
+	 * @return texto formateado en una caja de tamaño predeterminado con bordes
+	 *         personalizados
 	 */
 	public static String formatearTextoCajaPersonalizada(String[] textos, char horizontalChar, char verticalChar) {
 		return formatearTextoCajaFullPersonalizada(textos, anchoPredeterminado, horizontalChar, verticalChar,
@@ -38,14 +46,18 @@ public class FuncionesDialogo {
 	}
 
 	/**
-	 * Formatea un texto en una caja de texto con un ancho personalizado y cada uno de los bordes personalizados
-	 * @param textos texto a formatear, cada elemento del array es una linea, se ajusta automáticamente
-	 * @param anchoMaximo ancho máximo de la caja, mínimo 5
-	 * @param superiorChar carácter a usar para el borde horizontal superior
-	 * @param derechaChar carácter a usar para el borde vertical derecho
-	 * @param inferiorChar carácter a usar para el borde horizontal inferior
+	 * Formatea un texto en una caja de texto con un ancho personalizado y cada uno
+	 * de los bordes personalizados
+	 * 
+	 * @param textos        texto a formatear, cada elemento del array es una linea,
+	 *                      se ajusta automáticamente
+	 * @param anchoMaximo   ancho máximo de la caja, mínimo 5
+	 * @param superiorChar  carácter a usar para el borde horizontal superior
+	 * @param derechaChar   carácter a usar para el borde vertical derecho
+	 * @param inferiorChar  carácter a usar para el borde horizontal inferior
 	 * @param izquierdaChar carácter a usar para el borde vertical izquierdo
-	 * @return texto formateado en una caja de tamaño personalizado con bordes personalizados
+	 * @return texto formateado en una caja de tamaño personalizado con bordes
+	 *         personalizados
 	 */
 	public static String formatearTextoCajaFullPersonalizada(String[] textos, int anchoMaximo, char superiorChar,
 			char derechaChar, char inferiorChar, char izquierdaChar) {
@@ -61,7 +73,8 @@ public class FuncionesDialogo {
 
 			String[] lineas = ajustarLineas(texto.replace("\n", "").replace("\r", ""), anchoMaximo - 4);
 			for (String linea : lineas) {
-				resultado += izquierdaChar + " " + centrarLineaPersonalizada(linea, anchoMaximo - 4) + " " + derechaChar + "\n";
+				resultado += izquierdaChar + " " + centrarLineaPersonalizada(linea, anchoMaximo - 4) + " " + derechaChar
+						+ "\n";
 			}
 		}
 
@@ -71,42 +84,51 @@ public class FuncionesDialogo {
 	}
 
 	/**
-	 * Centra un texto en una caja de texto con el ancho predeterminado, con saltos de linea automáticos
+	 * Centra un texto en una caja de texto con el ancho predeterminado, con saltos
+	 * de linea automáticos
+	 * 
 	 * @param texto texto a centrar
 	 * @return texto centrado en una caja de tamaño máximo predeterminado
 	 */
 	public static String centrarTexto(String texto) {
 		return centrarTextoPersonalizado(texto, anchoPredeterminado);
 	}
+
 	/**
-	 * Centra un texto en una caja de texto con un ancho personalizado, con saltos de linea automáticos
-	 * @param texto texto a centrar
+	 * Centra un texto en una caja de texto con un ancho personalizado, con saltos
+	 * de linea automáticos
+	 * 
+	 * @param texto       texto a centrar
 	 * @param anchoMaximo ancho máximo de la caja
 	 * @return texto centrado en una caja de tamaño máximo personalizado
 	 */
 	public static String centrarTextoPersonalizado(String texto, int anchoMaximo) {
 		String[] lineas = ajustarLineas(texto, anchoMaximo);
 		String resultado = "";
-		for(int i = 0; i<lineas.length; i++) {
-			
+		for (int i = 0; i < lineas.length; i++) {
+
 			resultado += centrarLineaPersonalizada(lineas[i], anchoMaximo);
-			if(i!=lineas.length-1) {
-				resultado+="\n";
+			if (i != lineas.length - 1) {
+				resultado += "\n";
 			}
 		}
 		return resultado;
 	}
+
 	/**
 	 * Centra una linea sin saltos de linea con el ancho predeterminado
+	 * 
 	 * @param linea texto no mayor al ancho predeterminado a centrar
 	 * @return texto centrado en una caja de tamaño máximo predeterminado
 	 */
 	public static String centrarLinea(String linea) {
 		return centrarLineaPersonalizada(linea, anchoPredeterminado);
 	}
+
 	/**
 	 * Centra una linea sin saltos de linea con un ancho personalizado
-	 * @param linea texto no mayor al ancho especificado a centrar
+	 * 
+	 * @param linea       texto no mayor al ancho especificado a centrar
 	 * @param anchoMaximo ancho máximo de la linea
 	 * @return texto centrado en una linea de tamaño máximo personalizado
 	 */
@@ -132,7 +154,8 @@ public class FuncionesDialogo {
 
 	/**
 	 * Ajusta un texto a un ancho máximo, con saltos de linea automáticos
-	 * @param texto texto a ajustar (sin saltos de linea)
+	 * 
+	 * @param texto       texto a ajustar (sin saltos de linea)
 	 * @param anchoMaximo ancho máximo de cada linea del texto
 	 * @return texto ajustado a un ancho máximo
 	 */
@@ -159,8 +182,9 @@ public class FuncionesDialogo {
 
 	/**
 	 * Genera un borde horizontal de un ancho especificado
+	 * 
 	 * @param horizontalChar carácter a usar para el borde horizontal
-	 * @param anchoMaximo ancho máximo del borde
+	 * @param anchoMaximo    ancho máximo del borde
 	 * @return
 	 */
 	public static String bordeHorizontal(char horizontalChar, int anchoMaximo) {

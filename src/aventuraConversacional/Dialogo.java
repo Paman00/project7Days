@@ -72,6 +72,4 @@ public class Dialogo {
 		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2, 3, 4, 5 o 6" };
 		return modeloCajaError(textoParaCaja);
 	}
-
-	// public static String obtenerCajaR
 }

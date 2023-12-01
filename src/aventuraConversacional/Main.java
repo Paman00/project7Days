@@ -179,7 +179,7 @@ public class Main {
 				objetoEncontrado = true;
 				System.out.println(centrarLinea("(Revisa tu equipaje)"));
 				System.out.println(centrarLinea("Efectivamente, un " + inventario[i] + " todo correcto"));
-				break; // Si encuentra el objeto, sale del bucle
+				i = inventario.length; // Si encuentra el objeto, sale del bucle
 			}
 		}
 		if (!objetoEncontrado) {

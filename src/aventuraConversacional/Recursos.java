@@ -116,7 +116,6 @@ public class Recursos {
 			+ "                            ▓▓▓▓▓▓                                     \r\n";
 
 	// TODO: ? width
-	// TODO: Fix deleting extra characters
 	public static String bola = "                               ▓▓▓▓▓▓▓▓▓▓                              \r\n"
 			+ "                         ▓▓▓▓▓▓▓▓▓▓▓▓▓█████████                        \r\n"
 			+ "                      ▓▓▓▓▓▓████████████████▓▓████                     \r\n"
@@ -153,7 +152,6 @@ public class Recursos {
 			+ "                           ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒                      ";
 
 	// TODO: ? width
-	// TODO: Fix deleting extra characters
 	public static String naveAntesDeDespegar = "                                                                \r\n"
 			+ "                             ▒                                     \r\n"
 			+ "                           ▒░░▒                                    \r\n"
@@ -234,7 +232,6 @@ public class Recursos {
 			+ "░░░░░░░░░░░░░░░▒▓▓▓▓▓▒▓▒▓▓▓▓▓▓▓▓▓▓▓████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒";
 
 	// TODO: ? width
-	// TODO: Fix deleting extra characters
 	public static String dragon = " ███████████████████████████████████████████████ ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█████████\\r\\n\"\r\n"
 			+ "		+ \"████████████████████▓█████████▒   ░░░░   ▒████▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓████\\r\\n\"\r\n"
 			+ "		+ \"████████████████████  ████████ ░▒▓▓▓▓▓▓▓▓▒   ▓█ ░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██\\r\\n\"\r\n"

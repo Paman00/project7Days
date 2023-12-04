@@ -171,6 +171,8 @@ public class Main {
 		System.out.println("4. No");
 		System.out.println(centrarLinea("Ingrese 1, 2 o 3 para elegir un arma"));
 		opcion = sc.nextInt();
+		
+		//TODO Añadir errores de entrada
 
 		if (opcion == 1) {
 			objetoInventario = "Bola de Nieve de Cristal";
@@ -228,7 +230,7 @@ public class Main {
 		System.out.println("6. El sol");
 		System.out.println("7. Bogotá");
 		System.out.println("8. Ferrol");
-		System.out.println(centrarLinea("Ingrese 1, 2, 3, 4, 5, 6, 7 o 8 para elegir una ubucación"));
+		System.out.println(centrarLinea("Ingrese 1, 2, 3, 4, 5, 6, 7 o 8 para elegir una ubicación"));
 		opcion = sc.nextInt();
 
 		while (opcion < 1 || opcion > 8) {
@@ -252,7 +254,7 @@ public class Main {
 
 		System.out.println(Dialogo.cajaJefe3());
 
-		// TODO
+		// TODO Aqui se acabaria el juego. Hay que añadir eso
 		/*
 		 * if (respeto <= 0) { System.out.println(Dialogo.cajaJefeMuerteRespeto1());
 		 * System.out.println(Dialogo.cajaJefeMuerteRespeto2(nombre));
@@ -268,12 +270,13 @@ public class Main {
 		// Reiniciamos el valor de la variable usada para escoger las opciones
 		opcion = 0;
 
+		//TODO Añadir errores de entrada
 		while (opcion != 4) {
 			System.out.println("\n1. Revisar inventario");
 			System.out.println("2. Revisar combustible");
 			System.out.println("3. Revisar el plan con tu jefe");
 			System.out.println("4. No");
-			System.out.println(centrarLinea("Ingrese 1, 2, 3, 4, 5, 6, 7 o 8 para elegir una ubucación"));
+			System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir una opción"));
 			opcion = sc.nextInt();
 
 			if (opcion == 1) {
@@ -294,17 +297,90 @@ public class Main {
 				opcion = sc.nextInt();
 				if (opcion == 1) {
 					System.out.println(Dialogo.cajaNarrador08());
+					System.out.println(centrarLinea("Presione START para continuar"));
+					sc.nextLine();
 					System.out.println(Dialogo.cajaNarrador09());
 				}
 			} else if (opcion == 3) {
 				System.out.println(Dialogo.cajaNarrador10(nombre));
+				System.out.println(centrarLinea("Presione START para continuar"));
+				sc.nextLine();
 				System.out.println(Dialogo.cajaNarrador11());
+				System.out.println(centrarLinea("Presione START para continuar"));
+				sc.nextLine();
 				System.out.println(Dialogo.cajaNarrador12());
 
 			}
 		}
+		
+		// Reiniciamos el valor de la variable usada para escoger las opciones
+		opcion = 0;
 
-		System.out.println("hskfsdofjsdfoiñsnd");
+		System.out.println(Dialogo.cajaNarrador13());
+		System.out.println(centrarLinea("Presione START para continuar"));
+		sc.nextLine();
+		System.out.println(Dialogo.cajaNarrador14());
+		
+		System.out.println("\n1. Mirar por la ventana");
+		System.out.println("2. Echarte una siesta");
+		System.out.println("3. Nada");
+		System.out.println(centrarLinea("Ingrese 1, 2 o 3 para elegir una opción"));
+		opcion = sc.nextInt();
+		
+		//TODO Añadir errores de entrada
+		if (opcion == 1) {
+			System.out.println(Dialogo.cajaNarrador15());
+		}else if (opcion == 2) {
+			System.out.println(Dialogo.cajaNarrador16());
+			System.out.println(centrarLinea("Presione START para continuar"));
+			sc.nextLine();
+			System.out.println(Dialogo.cajaNarrador17());
+		}else if (opcion == 3) {
+			// Reiniciamos el valor de la variable usada para escoger las opciones
+			opcion = 0;
+			System.out.println(Dialogo.cajaNarrador18());
+			System.out.println("\n1. Seguir sin hacer nada");
+			System.out.println("2. Jugar con " + inventario[0]);
+			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
+			opcion = sc.nextInt();
+			
+			//TODO Añadir errores de entrada
+			if (opcion == 1 ) {
+				// Reiniciamos el valor de la variable usada para escoger las opciones
+				opcion = 0;
+				System.out.println(Dialogo.cajaNarrador19());
+				System.out.println("\n1. Rendirse");
+				System.out.println("2. Continuar");
+				System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
+				opcion = sc.nextInt();
+				//TODO Añadir errores de entrada
+				if (opcion == 1) {
+					System.out.println(Dialogo.cajaNarrador20());
+					finDeLaPartida = true;
+				}else if (opcion == 2) {
+					System.out.println(Dialogo.cajaNarrador21(nombre));
+				}
+				
+			}else if (opcion == 2) {
+				System.out.println(Dialogo.cajaNarrador22());
+			}
+		}
+		
+		System.out.println(Dialogo.cajaOtroPersonaje1());
+		
+		System.out.println(Dialogo.cajaNarrador23());
+		System.out.println(centrarLinea("Presione START para continuar"));
+		sc.nextLine();
+		System.out.println(Dialogo.cajaNarrador24());
+		
+		// Reiniciamos el valor de la variable usada para escoger las opciones
+		opcion = 0;
+		System.out.println("\n1. Revisar conbustible");
+		System.out.println("2. Revisar cuánto tiempo queda");
+		System.out.println("3. Estudiar");
+		System.out.println("4. Jugar juegos en el móvil");
+		System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir una opción"));
+		opcion = sc.nextInt();
 
 	}
 

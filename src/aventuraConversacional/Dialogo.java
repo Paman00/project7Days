@@ -193,91 +193,128 @@ public class Dialogo {
 				" y no use tanto combustible para salir del agujero gravitational de la tierra" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador09() {
-		String[] textoParaCaja = { "Pero si es verdad que está más bajo de lo que recordaba… Lo llenaremos hasta el 85%.", " Gracias." };
+		String[] textoParaCaja = {
+				"Pero si es verdad que está más bajo de lo que recordaba… Lo llenaremos hasta el 85%.", " Gracias." };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador10(String nombre) {
 		String[] textoParaCaja = { nombre + ", ¿quieres que repasemos el plan?", "Perfecto" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador11() {
-		String[] textoParaCaja = {"Vamos a ir a explorar la luna por primera vez desde que la extraña nube de polvo la envolvió hace 2 años, desde entonces hemos perdido toda pista de qué está pasando allí, todos los rovers que hemos mandado acaban con la cámara totalmente tapada, necesitamos que alguien vaya allí en persona para ver qué está pasando y de dónde viene ese polvoS"};
+		String[] textoParaCaja = {
+				"Vamos a ir a explorar la luna por primera vez desde que la extraña nube de polvo la envolvió hace 2 años, desde entonces hemos perdido toda pista de qué está pasando allí, todos los rovers que hemos mandado acaban con la cámara totalmente tapada, necesitamos que alguien vaya allí en persona para ver qué está pasando y de dónde viene ese polvoS" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador12() {
-		String[] textoParaCaja = { "El viaje de ida son 72 horas, estarás en la luna unas 12 horas, y harás otras 72 horas de vuelta. Sabemos que eres capaz." };
+		String[] textoParaCaja = {
+				"El viaje de ida son 72 horas, estarás en la luna unas 12 horas, y harás otras 72 horas de vuelta. Sabemos que eres capaz." };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador13() {
-		String[] textoParaCaja = {"Hora de subir pues", "(te pones el traje, subes a la nave y te preparas para el despegue)"};
+		String[] textoParaCaja = { "Hora de subir pues",
+				"(te pones el traje, subes a la nave y te preparas para el despegue)" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador14() {
-		String[] textoParaCaja = {"Ya son las 7am, la ventana de lanzamiento abre a las 7:30am", "¿Qué vas a hacer mientras esperas?"};
+		String[] textoParaCaja = { "Ya son las 7am, la ventana de lanzamiento abre a las 7:30am",
+				"¿Qué vas a hacer mientras esperas?" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador15() {
-		String[] textoParaCaja = {"Miras por la ventana aburrido, pasan 5 minutos cuando de repente ves a un dragón bajar del cielo mientras escupe fuego, te quedas mirando cómo se pelea con más dragones y entretienes hasta que pasa la media hora, te quedas ligeramente preocupado de que lleves sólo media hora sólo y ya te estás imaginando cosas raras para distraerte"};
+		String[] textoParaCaja = {
+				"Miras por la ventana aburrido, pasan 5 minutos cuando de repente ves a un dragón bajar del cielo mientras escupe fuego, te quedas mirando cómo se pelea con más dragones y entretienes hasta que pasa la media hora, te quedas ligeramente preocupado de que lleves sólo media hora sólo y ya te estás imaginando cosas raras para distraerte" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador16() {
-		String[] textoParaCaja = {"Es una idea terrible, pero te da bastante igual"};
+		String[] textoParaCaja = { "Es una idea terrible, pero te da bastante igual" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador17() {
-		String[] textoParaCaja = {"Te duermes y sueñas con la nave explotando en el espacio, de repente, un sonido fuerte te despierta"};
+		String[] textoParaCaja = {
+				"Te duermes y sueñas con la nave explotando en el espacio, de repente, un sonido fuerte te despierta" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador18() {
-		String[] textoParaCaja = {"Estás un rato largo sin hacer nada, miras el reloj y ves que sólo han pasado 3 minutos, vuelves a mirar el reloj, han pasado 4 minutos, cómo no haga algo pronto sientes que te vas a volver loco."};
+		String[] textoParaCaja = {
+				"Estás un rato largo sin hacer nada, miras el reloj y ves que sólo han pasado 3 minutos, vuelves a mirar el reloj, han pasado 4 minutos, cómo no haga algo pronto sientes que te vas a volver loco." };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador19() {
-		String[] textoParaCaja = {"Empiezas a pensar en todo lo que podría salir mal en el viaje y en cómo no quieres morir, si hay un momento para marcharse, es ahora"};
+		String[] textoParaCaja = {
+				"Empiezas a pensar en todo lo que podría salir mal en el viaje y en cómo no quieres morir, si hay un momento para marcharse, es ahora" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador20() {
-		String[] textoParaCaja = {"Sales de la nave y dices que no estás preparado, te vas a casa"};
+		String[] textoParaCaja = { "Sales de la nave y dices que no estás preparado, te vas a casa" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador21(String nombre) {
-		String[] textoParaCaja = {nombre + "Saca valor y decide continuar"};
+		String[] textoParaCaja = { nombre + "Saca valor y decide continuar" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador22() {
-		String[] textoParaCaja = {"Te entretienes un rato y distraes la mente, de repente, suena un anuncio"};
+		String[] textoParaCaja = { "Te entretienes un rato y distraes la mente, de repente, suena un anuncio" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaOtroPersonaje1() {
-		String[] textoParaCaja = {"VOZ: Quedan 3 minutos para el despegue."};
+		String[] textoParaCaja = { "VOZ: Quedan 3 minutos para el despegue." };
 		return modeloCajaOtrosPersonajes(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador23() {
-		String[] textoParaCaja = {"Después de un despegue exitoso estás en el espacio sólo, la verdad es que más tranquilo, ahora tienes que esperar 3 días hasta llegar all"};
+		String[] textoParaCaja = {
+				"Después de un despegue exitoso estás en el espacio sólo, la verdad es que más tranquilo, ahora tienes que esperar 3 días hasta llegar all" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador24() {
-		String[] textoParaCaja = {"Tendrás que elegir cómo usar esos días y prepararte para la investagión en la Luna"};
+		String[] textoParaCaja = {
+				"Tendrás que elegir cómo usar esos días y prepararte para la investagión en la Luna" };
+		return modeloCajaNarrador(textoParaCaja);
+	}
+
+	public static String cajaNarrador25() {
+		String[] textoParaCaja = { "60%, ha sido un buen despegue" };
+		return modeloCajaNarrador(textoParaCaja);
+	}
+
+	public static String cajaNarrador26() {
+		String[] textoParaCaja = { "2 días y 20 horas, queda un rato aún" };
+		return modeloCajaNarrador(textoParaCaja);
+	}
+
+	public static String cajaNarrador27() {
+		String[] textoParaCaja = {
+				"Estudias algunos libros que hay en la nave, antes de llegar a la Luna, te sientes un experto en cocina.",
+				"Tampoco hay ninguna cocina para comprobarlo pero no te hace falta" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 	
+	public static String cajaNarrador28() {
+		String[] textoParaCaja = { "Muy productivamente te pasas tres días jugando juegos de móvil, duermes bastante poco","como nunca es de noche en el espacio, se te olvida" };
+		return modeloCajaNarrador(textoParaCaja);
+	}
 	
+	public static String cajaError2() {
+		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2, 3 o 4" };
+		return modeloCajaError(textoParaCaja);
+	}
+
 }

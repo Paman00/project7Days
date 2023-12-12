@@ -153,6 +153,23 @@ public class FuncionesDialogo {
 	}
 
 	/**
+	 * Aumenta el tamaño de un array de String en uno
+	 * 
+	 * @param array  array de tipo String
+	 * @return array array base con un espacio extra
+	 */
+	public static String[] aumentarTamañoArray(String[] array) {
+		String [] arrayCopia = array.clone();
+
+		array = new String[arrayCopia.length+1];
+		for(int i = 0; i<array.length-1; i++) {
+			array[i] = arrayCopia[i];
+		}
+		
+		return array;
+	}
+
+	/**
 	 * Ajusta un texto a un ancho máximo, con saltos de linea automáticos
 	 * 
 	 * @param texto       texto a ajustar (sin saltos de linea)
@@ -160,24 +177,27 @@ public class FuncionesDialogo {
 	 * @return texto ajustado a un ancho máximo
 	 */
 	public static String[] ajustarLineas(String texto, int anchoMaximo) {
-		StringBuilder line = new StringBuilder("");
-		List<String> lineas = new ArrayList<String>();
+		String[] lineas = new String[0];
+		String linea = "";
 
 		String words[] = texto.split(" ");
 		for (String word : words) {
 			if (word.equals("\n") || word.equals("\r") || word.equals("\r\n") || word.equals("\n\r")) {
-				lineas.add(line.toString());
-				line = new StringBuilder("");
-			} else if (line.length() + word.length() < anchoMaximo) {
-				line.append(word + " ");
+				lineas = aumentarTamañoArray(lineas);
+				lineas[lineas.length-1] = linea;
+				linea = "";
+			} else if (linea.length() + word.length() < anchoMaximo) {
+				linea += word + " ";
 			} else {
-				lineas.add(line.toString());
-				line = new StringBuilder(word + " ");
+				lineas = aumentarTamañoArray(lineas);
+				lineas[lineas.length-1] = linea;
+				linea = word + " ";
 			}
 		}
-		lineas.add(line.toString());
+		lineas = aumentarTamañoArray(lineas);
+		lineas[lineas.length-1] = linea;
 
-		return lineas.toArray(new String[lineas.size()]);
+		return lineas;
 	}
 
 	/**
@@ -188,10 +208,10 @@ public class FuncionesDialogo {
 	 * @return
 	 */
 	public static String bordeHorizontal(char horizontalChar, int anchoMaximo) {
-		StringBuilder borde = new StringBuilder();
+		String borde = "";
 		for (int i = 0; i < anchoMaximo; i++) {
-			borde.append(horizontalChar);
+			borde += horizontalChar;
 		}
-		return borde.toString();
+		return borde;
 	}
 }

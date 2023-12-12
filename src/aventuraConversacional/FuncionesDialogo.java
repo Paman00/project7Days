@@ -1,8 +1,5 @@
 package aventuraConversacional;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class FuncionesDialogo {
 	public static int anchoPredeterminado = 71;
 
@@ -153,19 +150,19 @@ public class FuncionesDialogo {
 	}
 
 	/**
-	 * Aumenta el tamaño de un array de String en uno
+	 * Aumenta el tamaño de un array de Strings en 1 y agrega un campo nulo al final
 	 * 
-	 * @param array  array de tipo String
-	 * @return array array base con un espacio extra
+	 * @param array array de Strings a aumentar
+	 * @return array base con un campo final nulo
 	 */
 	public static String[] aumentarTamañoArray(String[] array) {
-		String [] arrayCopia = array.clone();
+		String[] arrayCopia = array.clone();
 
-		array = new String[arrayCopia.length+1];
-		for(int i = 0; i<array.length-1; i++) {
+		array = new String[arrayCopia.length + 1];
+		for (int i = 0; i < array.length - 1; i++) {
 			array[i] = arrayCopia[i];
 		}
-		
+
 		return array;
 	}
 
@@ -184,18 +181,18 @@ public class FuncionesDialogo {
 		for (String word : words) {
 			if (word.equals("\n") || word.equals("\r") || word.equals("\r\n") || word.equals("\n\r")) {
 				lineas = aumentarTamañoArray(lineas);
-				lineas[lineas.length-1] = linea;
+				lineas[lineas.length - 1] = linea;
 				linea = "";
 			} else if (linea.length() + word.length() < anchoMaximo) {
 				linea += word + " ";
 			} else {
 				lineas = aumentarTamañoArray(lineas);
-				lineas[lineas.length-1] = linea;
+				lineas[lineas.length - 1] = linea;
 				linea = word + " ";
 			}
 		}
 		lineas = aumentarTamañoArray(lineas);
-		lineas[lineas.length-1] = linea;
+		lineas[lineas.length - 1] = linea;
 
 		return lineas;
 	}

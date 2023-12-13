@@ -26,6 +26,11 @@ public class Dialogo {
 		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(texto, '=', '|');
 		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.PURPLE);
 	}
+	
+	public static String modeloCajaFinales(String[] texto) {
+		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(texto, '=', '|');
+		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.YELLOW);
+	}
 
 	/* Cajas de Texto */
 	public static String cajaIntroduccion() {
@@ -153,18 +158,18 @@ public class Dialogo {
 
 	public static String cajaJefeMuerteRespeto1() {
 		String[] textoParaCaja = { "Vale, espera aquí un momento" };
-		return modeloCajaOtrosPersonajes(textoParaCaja);
+		return modeloCajaFinales(textoParaCaja);
 	}
 
 	public static String cajaJefeMuerteRespeto2(String nombre) {
 		String[] textoParaCaja = { nombre + " hemos estado hablando y creemos que va a ser mejor",
 				"que hoy no subas a la nave, deberías irte a casa a descansar" };
-		return modeloCajaOtrosPersonajes(textoParaCaja);
+		return modeloCajaFinales(textoParaCaja);
 	}
 
 	public static String cajaMuerteNarrador() {
 		String[] textoParaCaja = { "(Se han ido sin ti)" };
-		return modeloCajaNarrador(textoParaCaja);
+		return modeloCajaFinales(textoParaCaja);
 	}
 
 	public static String cajaNarrador04() {
@@ -315,6 +320,46 @@ public class Dialogo {
 	public static String cajaError2() {
 		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2, 3 o 4" };
 		return modeloCajaError(textoParaCaja);
+	}
+	
+	public static String cajaNarrador29() {
+		String[] textoParaCaja = { "[Legada a la Luna]" };
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador30() {
+		String[] textoParaCaja = { "Desde hace unas horas llevas viendo como la luna se acercaba, te preparas y te pones el traje espacial" };
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador31() {
+		String[] textoParaCaja = { "Sales de la nave y miras a tu alrededor", "¿Qué haces?"};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador32() {
+		String[] textoParaCaja = {"Te quedas todo el tiempo allí sentado sin hacer nada, cuando ya ha sido suficiente,", "te vuelves a la nave, Luna explorada supongo."};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaFinal2_1() {
+		String[] textoParaCaja = { "Vuelves a la tierra y comunicas que todo en la Luna está correcto, nada interesante"};
+		return modeloCajaFinales(textoParaCaja);
+	}
+	
+	public static String cajaFinal2_2() {
+		String[] textoParaCaja = { "A la gente le parece una respuesta aburrida pero entienden que así son las cosas,","te recuerdan como un astronauta mediocre y poco más, te da para vivir"};
+		return modeloCajaFinales(textoParaCaja);
+	}
+	
+	public static String cajaNarrador33() {
+		String[] textoParaCaja = {"Te adentras en la nube de polvo de la Luna y caminas un rato"};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador34() {
+		String[] textoParaCaja = {"Te estás empezando a aburrir de la Luna cuando de repente ves una sombra a lo lejos "};
+		return modeloCajaNarrador(textoParaCaja);
 	}
 
 }

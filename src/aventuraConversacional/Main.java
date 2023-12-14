@@ -585,7 +585,7 @@ public class Main {
 		System.out.println("4. Jugar juegos en el móvil");
 		System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir una opción"));
 		opcion = sc.nextInt();
-		
+
 		while (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4) {
 			System.out.println(Dialogo.cajaError2());
 			System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir una opción"));

@@ -10,7 +10,7 @@ public class Main {
 	private static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		// Declaramos las funciones que vamos a usar
+		// Declaramos las variables que vamos a usar
 		String nombre;
 		int opcion;
 		String[] inventario = new String[5];
@@ -22,6 +22,14 @@ public class Main {
 		int inteligencia = 0;
 		int cansancio = 0;
 		int contadorEspera = 0;
+		
+		int vidaProta = 35;
+		int ataqueProta = 10;
+		int defensaProta = 3;
+		
+		int vidaAlien = 30;
+		int ataqueAlien = 8;
+		int defensaAlien = 5;
 
 		// Damos la introducción al usuario y esperamos a que presione START
 		System.out.println(Dialogo.cajaIntroduccion());
@@ -397,7 +405,7 @@ public class Main {
 			System.out.println(centrarLinea("Ingrese 1, 2 o 3 para elegir un arma"));
 			opcion = sc.nextInt();
 		}
-		
+
 		if (opcion == 1) {
 			System.out.println(Dialogo.cajaNarrador15());
 			System.out.println(Recursos.dragon);
@@ -514,7 +522,7 @@ public class Main {
 
 			// Reiniciamos el valor de la variable usada para escoger las opciones
 			opcion = 0;
-			
+
 			System.out.println("¿Qué haces?");
 			System.out.println(Dialogo.cajaNarrador33()); // como 33
 			System.out.println(Dialogo.cajaNarrador34());
@@ -536,7 +544,7 @@ public class Main {
 			} else if (opcion == 2) {
 				System.out.println(Dialogo.cajaNarrador36());
 			}
-			
+
 			System.out.println(centrarLinea("Presione START para continuar"));
 			sc.nextLine();
 			System.out.println(Recursos.menosSombra);
@@ -554,29 +562,56 @@ public class Main {
 			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
 			opcion = sc.nextInt();
 		}
-		
+
 		if (opcion == 1) {
 			System.out.println(Dialogo.cajaNarrador37());
 		} else if (opcion == 2) {
 			System.out.println(Dialogo.cajaNarrador38());
 		}
-		
+
 		System.out.println(centrarLinea("Presione START para continuar"));
 		sc.nextLine();
 		System.out.println(Recursos.alien);
 		System.out.println(Dialogo.cajaNarrador39());
-		
+
 		System.out.println("¿Qué harás?");
-		System.out.println("\n1. Luchar");
-		System.out.println("2. Hablar");
-		System.out.println("3. Objeto");
-		System.out.println("4. Huir");
-		System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
-		opcion = sc.nextInt();
-		
+
+		while (vidaProta > 0 && vidaAlien > 0) {
+
+			System.out.println("\n1. Luchar");
+			System.out.println("2. Hablar");
+			System.out.println("3. Objeto");
+			System.out.println("4. Huir");
+			System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir una opción"));
+			opcion = sc.nextInt();
+
+			switch (opcion) {
+
+			case 1:
+				vidaAlien = realizarAtaque(nombre, vidaAlien, ataqueProta, defensaAlien);
+				/*
+				int[] vidas = realizarAtaque(nombre, vidaProta, ataqueProta, defensaProta, vidaAlien, ataqueAlien, defensaAlien);
+			    vidaProta = vidas[0];
+			    vidaAlien = vidas[1];
+			    */
+				break;
+			case 2:
+
+				break;
+			case 3:
+
+				break;
+			case 4:
+
+				break;
+			default:
+				System.out.println("Esa opción no es válida, por favor elige otra");
+			}
+
+		}
 	}
 
-	//TODO Finales
+	// TODO Finales
 	/*
 	 * Texto Fin de la partida 1
 	 * System.out.println(Dialogo.cajaJefeMuerteRespeto1());
@@ -595,5 +630,48 @@ public class Main {
 	 */
 	public static void resetBuffer() {
 		sc.nextLine();
+	}
+
+	public static int realizarAtaque(String nombre, int vidaAlien, int ataqueProta, int defensaAlien) {
+
+		System.out.println("\n" + nombre + " ataca al alien");
+
+		int probabilidad = (int) (Math.random() * 4 + 1);
+
+		if (probabilidad == 1) {
+			System.out.println("El alien consigue defenderse por lo que tu daño se ve reducido.");
+			int resultado = vidaAlien - (ataqueProta - defensaAlien);
+			return resultado;
+		} else {
+			int resultado = vidaAlien - (ataqueProta);
+			return resultado;
+		}
+	}
+	
+	public static int[] realizarAtaque(String nombre, int vidaProta, int ataqueProta, int defensaProta, int vidaAlien, int ataqueAlien, int defensaAlien) {
+
+	    System.out.println("\n" + nombre + " ataca al alien");
+
+	    int probabilidad = (int) (Math.random() * 4 + 1);
+
+	    if (probabilidad == 1) {
+	        System.out.println("El alien consigue defenderse por lo que tu daño se ve reducido.");
+	        vidaAlien = vidaAlien - (ataqueProta - defensaAlien);
+	    } else {
+	        vidaAlien = vidaAlien - ataqueProta;
+	    }
+
+	    // Añadimos la posibilidad de que el alien ataque
+	    probabilidad = (int) (Math.random() * 4 + 1);
+
+	    if (probabilidad == 1) {
+	        System.out.println("El protagonista consigue defenderse por lo que el daño se ve reducido.");
+	        vidaProta = vidaProta - (ataqueAlien - defensaProta);
+	    } else {
+	        vidaProta = vidaProta - ataqueAlien;
+	    }
+
+	    // Devolvemos las vidas actualizadas en un array
+	    return new int[] {vidaProta, vidaAlien};
 	}
 }

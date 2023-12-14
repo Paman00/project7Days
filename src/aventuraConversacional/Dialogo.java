@@ -386,18 +386,6 @@ public class Dialogo {
 
 	/* Cajas de texto de Final */
 
-	public static String cajaFinal2_1() {
-		String[] textoParaCaja = {
-				"Vuelves a la tierra y comunicas que todo en la Luna está correcto, nada interesante" };
-		return modeloCajaFinales(textoParaCaja);
-	}
-
-	public static String cajaFinal2_2() {
-		String[] textoParaCaja = { "A la gente le parece una respuesta aburrida pero entienden que así son las cosas,",
-				"te recuerdan como un astronauta mediocre y poco más, te da para vivir" };
-		return modeloCajaFinales(textoParaCaja);
-	}
-
 	public static String cajaJefeMuerteRespeto1() {
 		String[] textoParaCaja = { "Vale, espera aquí un momento" };
 		return modeloCajaFinales(textoParaCaja);
@@ -411,6 +399,33 @@ public class Dialogo {
 
 	public static String cajaMuerteNarrador() {
 		String[] textoParaCaja = { "(Se han ido sin ti)" };
+		return modeloCajaFinales(textoParaCaja);
+	}
+	
+	public static String cajaFinal2_1() {
+		String[] textoParaCaja = {
+				"Vuelves a la tierra y comunicas que todo en la Luna está correcto, nada interesante" };
+		return modeloCajaFinales(textoParaCaja);
+	}
+
+	public static String cajaFinal2_2() {
+		String[] textoParaCaja = { "A la gente le parece una respuesta aburrida pero entienden que así son las cosas,",
+				"te recuerdan como un astronauta mediocre y poco más, te da para vivir" };
+		return modeloCajaFinales(textoParaCaja);
+	}
+	
+	public static String cajaFinal3() {
+		String[] textoParaCaja = { "Vuelves a la tierra, cuando la gente te pide que informes lo que ha pasado les cuentas tu pelea con el alien y te toman por loco, en futuras misiones, otros astronautas van a la Luna y ninguno ve lo que dijiste, definitivamente estás loco y así te recordarán siempre." };
+		return modeloCajaFinales(textoParaCaja);
+	}
+	
+	public static String cajaFinal4_1() {
+		String[] textoParaCaja = { "Llevas al Alien a la tierra y todos alucinan, es el mayor descubrimiento de la historia, se te recuerda como una de las personas más importantes del mundo " };
+		return modeloCajaFinales(textoParaCaja);
+	}
+	
+	public static String cajaFinal4_2() {
+		String[] textoParaCaja = { "Unos años después los aliens salen de la luna y declaran la guerra a los humanos, culpa tuya supongo" };
 		return modeloCajaFinales(textoParaCaja);
 	}
 

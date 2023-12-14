@@ -209,8 +209,10 @@ public class Main {
 		int contadorFallo = 0;
 		String objetoInventario = null;
 		boolean objetoEncontrado = false;
+		// ! Unused variables: inteligencia, cansancio
 		int inteligencia = 0;
 		int cansancio = 0;
+
 		int contadorEspera = 0;
 
 		int vidaProta = 35;
@@ -351,7 +353,7 @@ public class Main {
 		// Reiniciamos el valor de la variable usada para escoger las opciones
 		contadorFallo = 0;
 
-		System.out.println("El respeto es de " + respeto);
+		System.out.println(agregarColor(centrarLinea("El respeto es de " + respeto), Recursos.CYAN_BACKGROUND));
 
 		// Si el respeto llega a 0, se acaba la partida y retorna el texto clave
 		if (respeto <= 0) {
@@ -398,16 +400,18 @@ public class Main {
 			System.out.println(Dialogo.cajaJefe4(objetoInventario, inventario));
 
 			respeto--;
-			System.out.println(centrarLinea("Se ha restado 1 de respeto"));
+			System.out.println(agregarColor(centrarLinea("Se ha restado 1 de respeto"), Recursos.RED_BACKGROUND));
 		}
 
-		System.out.println("El respeto es de " + respeto);
+		System.out.println(agregarColor(centrarLinea("El respeto es de " + respeto), Recursos.CYAN_BACKGROUND));
 
 		System.out.println(agregarColor(centrarLinea("\nProxima pregunta, ¿por qué estamos haciendo esta misión?"),
 				Recursos.PURPLE));
 		System.out.println(Dialogo.cajaNarrador02());
 		System.out.println(centrarLinea("Presione START para continuar"));
 		sc.nextLine();
+		// Reset de Buffer por error
+		resetBuffer();
 		System.out.println(Dialogo.cajaProtaRespuestaRespeto01());
 		System.out.println(centrarLinea("Presione START para continuar"));
 		sc.nextLine();
@@ -429,7 +433,7 @@ public class Main {
 			System.out.println("6. El sol");
 			System.out.println("7. Bogotá");
 			System.out.println("8. Ferrol");
-			System.out.println(centrarLinea("\nIngrese 1, 2, 3, 4, 5, 6, 7 o 8 para elegir una ubicación"));
+			System.out.println(centrarLinea("Ingrese 1, 2, 3, 4, 5, 6, 7 o 8 para elegir una ubicación"));
 			opcion = sc.nextInt();
 
 			if (opcion == 1 || opcion == 2 || opcion == 3 || opcion == 5 || opcion == 6 || opcion == 7) {
@@ -459,7 +463,7 @@ public class Main {
 
 		System.out.println(Dialogo.cajaJefe3());
 
-		System.out.println("El respeto es de " + respeto);
+		System.out.println(agregarColor(centrarLinea("El respeto es de " + respeto), Recursos.CYAN_BACKGROUND));
 
 		if (respeto <= 0) {
 			return "perdido1";
@@ -477,6 +481,8 @@ public class Main {
 			System.out.println("4. No");
 			System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir una opción"));
 			opcion = sc.nextInt();
+			// Reset de Buffer por error
+			resetBuffer();
 
 			if (opcion == 1) {
 				opcion = 0;
@@ -496,20 +502,15 @@ public class Main {
 				System.out.println("2. No");
 				opcion = sc.nextInt();
 				if (opcion == 1) {
-					System.out.println(Dialogo.cajaNarrador08());
-					System.out.println(centrarLinea("Presione START para continuar"));
-					sc.nextLine();
+					System.out.println(Dialogo.cajaNarrador08() + "\n");
 					System.out.println(Dialogo.cajaNarrador09());
 				}
 			} else if (opcion == 3) {
-				System.out.println(Dialogo.cajaNarrador10(nombre));
-				System.out.println(centrarLinea("Presione START para continuar"));
-				sc.nextLine();
+				System.out.println(Dialogo.cajaNarrador10(nombre) + "\n");
 				System.out.println(Dialogo.cajaNarrador11());
 				System.out.println(centrarLinea("Presione START para continuar"));
 				sc.nextLine();
 				System.out.println(Dialogo.cajaNarrador12());
-
 			} else if (opcion < 1 || opcion > 4) {
 				System.out.println(Dialogo.cajaError2());
 			}

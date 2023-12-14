@@ -22,7 +22,8 @@ public class Recursos {
 	public static final String WHITE_BACKGROUND = "\u001B[47m";
 
 	// 73 width
-	public static String casco = "                        ░░░░▒▒▒▓▓▓▓▓▓▓▓▒▒░░░                             \r\n"
+	public static String casco = 
+			"                        ░░░░▒▒▒▓▓▓▓▓▓▓▓▒▒░░░                             \r\n"
 			+ "                   ░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░▒                        \r\n"
 			+ "               ░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░                    \r\n"
 			+ "             ▒▒▓▓▓▓▓▓▓▓▓▓▓███▓▓▓▓█████████▓▓▓▓█▓▓▓▓▓▓▒░                  \r\n"
@@ -59,7 +60,8 @@ public class Recursos {
 			+ "            ░░░░░░▒░░▒░░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒░░░░░░░░░░░░░░";
 
 	// TODO: ? width
-	public static String destornillador = "                                                                ▓▓▓▓▓▓ \r\n"
+	public static String destornillador = 
+			"                                                                ▓▓▓▓▓▓ \r\n"
 			+ "                                                           ▒▒▒▓▒▒▓▓▓▒▒▒\r\n"
 			+ "                                                       ▒▒▒▒▓▒▒▒▒▒▒▒▒▒▒▒\r\n"
 			+ "                                                   ▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\r\n"
@@ -79,7 +81,8 @@ public class Recursos {
 			+ "  ░░▒███▓                                                              ";
 
 	// TODO: ? width
-	public static String pajaro = "                                                                       \r\n"
+	public static String pajaro = 
+			"                                                                       \r\n"
 			+ "                                                                       \r\n"
 			+ "                     ▓▓▓▓▓         	                                    \r\n"
 			+ "               ▒▒▒▒▒▓▓▓▓▓▓▓▓▓                                          \r\n"
@@ -116,7 +119,8 @@ public class Recursos {
 			+ "                            ▓▓▓▓▓▓                                     \r\n";
 
 	// TODO: ? width
-	public static String bola = "                               ▓▓▓▓▓▓▓▓▓▓                              \r\n"
+	public static String bola = 
+			"                               ▓▓▓▓▓▓▓▓▓▓                              \r\n"
 			+ "                         ▓▓▓▓▓▓▓▓▓▓▓▓▓█████████                        \r\n"
 			+ "                      ▓▓▓▓▓▓████████████████▓▓████                     \r\n"
 			+ "                   ▓▓▓▓▓█████████████▓███▓▓██▓▓▓▓████                  \r\n"
@@ -152,7 +156,8 @@ public class Recursos {
 			+ "                           ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒                      ";
 
 	// TODO: ? width
-	public static String naveAntesDeDespegar = "                                                                \r\n"
+	public static String naveAntesDeDespegar =
+			"                                                                \r\n"
 			+ "                             ▒                                     \r\n"
 			+ "                           ▒░░▒                                    \r\n"
 			+ "                          ▒░░░░░▒                                  \r\n"
@@ -260,7 +265,8 @@ public class Recursos {
 			+ "		+ \"████████████████▓████████  ███ ░░  ░░▒▓█████████████▓ ███████████████████\\r\\n\"\r\n"
 			+ "		+ \"██████████████████████████    ▒▓███████▒ ░██████████▒ ███████████████████";
 
-	public static String coche = "                                                                       \r\n"
+	public static String coche = 
+			"                                                                       \r\n"
 			+ "                                                                       \r\n"
 			+ "                                                                       \r\n"
 			+ "            ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒                              \r\n"
@@ -278,7 +284,8 @@ public class Recursos {
 			+ "        ░░░░░░░░░                                    ░░░░░░░░░         \r\n"
 			+ "                                                                       \r\n";
 
-	public static String llaves = "                                                                         \r\n"
+	public static String llaves = 
+			"                                                                         \r\n"
 			+ "                                                                         \r\n"
 			+ "                                                                         \r\n"
 			+ "                                                                         \r\n"
@@ -301,7 +308,8 @@ public class Recursos {
 			+ "                                                                         \r\n"
 			+ "                                                                         ";
 
-	public static String despegue = "                                                                        \r\n"
+	public static String despegue = 
+			"                                                                        \r\n"
 			+ "                                                                        \r\n"
 			+ "                                                                        \r\n"
 			+ "                                                                        \r\n"
@@ -355,7 +363,8 @@ public class Recursos {
 			+ "███████▓▓▓▓▓▓▓█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\r\n"
 			+ "▓▓██████▓▓▓▒▒▒▒▓▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓\r\n";
 
-	public static String sombra = "                                                                       \r\n"
+	public static String sombra = 
+			"                                                                       \r\n"
 			+ "                     ▒▒                    ▒▒▒▒▒▒                      \r\n"
 			+ "                   ▒▒▒▒▒▒                 ▒▒▒▒▒▒▒▒                     \r\n"
 			+ "                  ▒▒▒▒▒▒▒                 ▒▒▒▒▒▒▒                      \r\n"
@@ -395,7 +404,8 @@ public class Recursos {
 			+ "                            ▒▒▒▒▒▒    ▒▒▒▒▒▒▒▒                         \r\n"
 			+ "                                                                       ";
 
-	public static String menosSombra = "                                                                       \r\n"
+	public static String menosSombra = 
+			"                                                                       \r\n"
 			+ "                     ▒▒                    ▒▒▒▒▒▒                      \r\n"
 			+ "                   ▒▒▒▒▒▒                 ▒▒▒▒▒▒▒▒                     \r\n"
 			+ "                  ▓▓▓▓▓▒▒                 ▓▒▒▒▒▒▒                      \r\n"
@@ -435,7 +445,8 @@ public class Recursos {
 			+ "                            ▒▓▒▒▒▒    ▓▒▒▒▒▒▒▒                         \r\n"
 			+ "                                                                       ";
 
-	public static String alien = "                                                                   \r\n"
+	public static String alien = 
+			"                                                                   \r\n"
 			+ "                   ▒▒▒                  ▒▒▒▒▒▒                     \r\n"
 			+ "                  ▓▓▓▓▒▒                ▒▒░░▒▒▒                    \r\n"
 			+ "                  ▓██▓▒░                ▓▓▒▒▒▒                     \r\n"

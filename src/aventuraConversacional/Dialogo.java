@@ -1,6 +1,7 @@
 package aventuraConversacional;
 
 public class Dialogo {
+
 	/* Modelos */
 	public static String modeloCajaIntroduccion(String[] texto) {
 		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(texto, 'u', 'v');
@@ -26,13 +27,14 @@ public class Dialogo {
 		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(texto, '=', '|');
 		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.PURPLE);
 	}
-	
+
 	public static String modeloCajaFinales(String[] texto) {
 		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(texto, '=', '|');
 		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.YELLOW);
 	}
 
-	/* Cajas de Texto */
+	/* Cajas de texto de Inicio */
+
 	public static String cajaIntroduccion() {
 		String[] textoParaCaja = { "¡Hola jugador!",
 				"en esta aventura usted llevará a caba una misión en el espacio mientras se enfrenta a numerosas dificultades" };
@@ -45,20 +47,60 @@ public class Dialogo {
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
+	/* Cajas de texto de Error */
+
 	public static String cajaErrorInicio() {
 		String[] textoParaCaja = { "Error:", "¡Vaya!, parece que tiene que empezar su nombre por una letra" };
 		return modeloCajaError(textoParaCaja);
 	}
 
+	public static String cajaErrorSeleccionarObjeto() {
+		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2 o 3" };
+		return modeloCajaError(textoParaCaja);
+	}
+
+	public static String cajaErrorSeleccionarModo() {
+		String[] textoParaCaja = { "Debe de elegir un numero:", "1 o 2" };
+		return modeloCajaError(textoParaCaja);
+	}
+
+	public static String cajaFallorespeto1() {
+		String[] textoParaCaja = { "Ups, parece que aún no estás muy despierto, esa no es la respuesta correcta,",
+				"venga, vuelve a intentarlo, te la sabes." };
+		return modeloCajaError(textoParaCaja);
+	}
+
+	public static String cajaErrorRespeto1() {
+		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2, 3, 4, 5 o 6" };
+		return modeloCajaError(textoParaCaja);
+	}
+
+	public static String cajaErrorRespeto2() {
+		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2, 3, 4, 5, 6, 7 o 8" };
+		return modeloCajaError(textoParaCaja);
+	}
+
+	public static String cajaFallorespeto2() {
+		String[] textoParaCaja = { "No, no vas allí señor, ¿Seguro que está todo bien?" };
+		return modeloCajaError(textoParaCaja);
+	}
+
+	public static String cajaError2() {
+		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2, 3 o 4" };
+		return modeloCajaError(textoParaCaja);
+	}
+
+	public static String cajaError3() {
+		String[] textoParaCaja = { "Debe de elegir un numero:", "1 o 2" };
+		return modeloCajaError(textoParaCaja);
+	}
+
+	/* Cajas de texto del Narrador */
+
 	public static String cajaSeleccionarObjeto(String nombre) {
 		String[] textoParaCaja = { nombre + ", ",
 				"vas a estar una semana fuera, 3 días de ida, uno en la luna y 3 de vuelta" };
 		return modeloCajaNarrador(textoParaCaja);
-	}
-
-	public static String cajaErrorSeleccionarObjeto() {
-		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2 o 3" };
-		return modeloCajaError(textoParaCaja);
 	}
 
 	public static String cajaSeleccionarModoSalida() {
@@ -72,11 +114,6 @@ public class Dialogo {
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
-	public static String cajaErrorSeleccionarModo() {
-		String[] textoParaCaja = { "Debe de elegir un numero:", "1 o 2" };
-		return modeloCajaError(textoParaCaja);
-	}
-
 	public static String cajaHoraLLegada01() {
 		String[] textoParaCaja = { "Llegas a las 06:25 al lanzamiento" };
 		return modeloCajaNarrador(textoParaCaja);
@@ -85,34 +122,6 @@ public class Dialogo {
 	public static String cajaHoraLLegada02() {
 		String[] textoParaCaja = { "Llegas a las 06:00 al lanzamiento" };
 		return modeloCajaNarrador(textoParaCaja);
-	}
-
-	public static String cajaFallorespeto1() {
-		String[] textoParaCaja = { "Ups, parece que aún no estás muy despierto, esa no es la respuesta correcta,",
-				"venga, vuelve a intentarlo, te la sabes." };
-		return modeloCajaError(textoParaCaja);
-	}
-
-	public static String cajaJefe1() {
-		String[] textoParaCaja = {
-				"Eso, la fuerza de la gravedad hace que se queme mucho combustible para poder salir" };
-		return modeloCajaOtrosPersonajes(textoParaCaja);
-	}
-
-	public static String cajaJefe2() {
-		String[] textoParaCaja = { "¿Estás bien? ¿Sabes por lo menos a dónde vas no?" };
-		return modeloCajaOtrosPersonajes(textoParaCaja);
-	}
-
-	public static String cajaErrorRespeto1() {
-		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2, 3, 4, 5 o 6" };
-		return modeloCajaError(textoParaCaja);
-	}
-
-	public static String cajaProtaRespuestaRespeto01() {
-		String[] textoParaCaja = { "...",
-				"No puede ser, llevo toda la vida esperando para esto y se me ha olvidado que es lo que iba a hacer" };
-		return modeloCajaProta(textoParaCaja);
 	}
 
 	public static String cajaNarrador01() {
@@ -129,47 +138,6 @@ public class Dialogo {
 	public static String cajaNarrador03() {
 		String[] textoParaCaja = { "(No respondes)" };
 		return modeloCajaNarrador(textoParaCaja);
-	}
-
-	public static String cajaProtaRespuestaRespeto02() {
-		String[] textoParaCaja = { "(Venga, eso por lo menos tengo que saberlo" };
-		return modeloCajaProta(textoParaCaja);
-	}
-
-	public static String cajaErrorRespeto2() {
-		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2, 3, 4, 5, 6, 7 o 8" };
-		return modeloCajaError(textoParaCaja);
-	}
-
-	public static String cajaFallorespeto2() {
-		String[] textoParaCaja = { "No, no vas allí señor, ¿Seguro que está todo bien?" };
-		return modeloCajaError(textoParaCaja);
-	}
-
-	public static String cajaJefe3() {
-		String[] textoParaCaja = { "Jajaja, Claro que sí, ya verás cómo sale todo bien" };
-		return modeloCajaOtrosPersonajes(textoParaCaja);
-	}
-
-	public static String cajaJefe4(String objetoInventario, String[] inventario) {
-		String[] textoParaCaja = { "Eh... señor esto no es un, " + objetoInventario + ", es un " + inventario[0] };
-		return modeloCajaOtrosPersonajes(textoParaCaja);
-	}
-
-	public static String cajaJefeMuerteRespeto1() {
-		String[] textoParaCaja = { "Vale, espera aquí un momento" };
-		return modeloCajaFinales(textoParaCaja);
-	}
-
-	public static String cajaJefeMuerteRespeto2(String nombre) {
-		String[] textoParaCaja = { nombre + " hemos estado hablando y creemos que va a ser mejor",
-				"que hoy no subas a la nave, deberías irte a casa a descansar" };
-		return modeloCajaFinales(textoParaCaja);
-	}
-
-	public static String cajaMuerteNarrador() {
-		String[] textoParaCaja = { "(Se han ido sin ti)" };
-		return modeloCajaFinales(textoParaCaja);
 	}
 
 	public static String cajaNarrador04() {
@@ -278,11 +246,6 @@ public class Dialogo {
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
-	public static String cajaOtroPersonaje1() {
-		String[] textoParaCaja = { "VOZ: Quedan 3 minutos para el despegue." };
-		return modeloCajaOtrosPersonajes(textoParaCaja);
-	}
-
 	public static String cajaNarrador23() {
 		String[] textoParaCaja = {
 				"Después de un despegue exitoso estás en el espacio sólo, la verdad es que más tranquilo, ahora tienes que esperar 3 días hasta llegar all" };
@@ -311,55 +274,144 @@ public class Dialogo {
 				"Tampoco hay ninguna cocina para comprobarlo pero no te hace falta" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador28() {
-		String[] textoParaCaja = { "Muy productivamente te pasas tres días jugando juegos de móvil, duermes bastante poco","como nunca es de noche en el espacio, se te olvida" };
+		String[] textoParaCaja = {
+				"Muy productivamente te pasas tres días jugando juegos de móvil, duermes bastante poco",
+				"como nunca es de noche en el espacio, se te olvida" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
-	public static String cajaError2() {
-		String[] textoParaCaja = { "Debe de elegir un numero:", "1, 2, 3 o 4" };
-		return modeloCajaError(textoParaCaja);
-	}
-	
+
 	public static String cajaNarrador29() {
 		String[] textoParaCaja = { "[Legada a la Luna]" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador30() {
-		String[] textoParaCaja = { "Desde hace unas horas llevas viendo como la luna se acercaba, te preparas y te pones el traje espacial" };
+		String[] textoParaCaja = {
+				"Desde hace unas horas llevas viendo como la luna se acercaba, te preparas y te pones el traje espacial" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador31() {
-		String[] textoParaCaja = { "Sales de la nave y miras a tu alrededor", "¿Qué haces?"};
+		String[] textoParaCaja = { "Sales de la nave y miras a tu alrededor", "¿Qué haces?" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador32() {
-		String[] textoParaCaja = {"Te quedas todo el tiempo allí sentado sin hacer nada, cuando ya ha sido suficiente,", "te vuelves a la nave, Luna explorada supongo."};
+		String[] textoParaCaja = {
+				"Te quedas todo el tiempo allí sentado sin hacer nada, cuando ya ha sido suficiente,",
+				"te vuelves a la nave, Luna explorada supongo." };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
-	public static String cajaFinal2_1() {
-		String[] textoParaCaja = { "Vuelves a la tierra y comunicas que todo en la Luna está correcto, nada interesante"};
-		return modeloCajaFinales(textoParaCaja);
-	}
-	
-	public static String cajaFinal2_2() {
-		String[] textoParaCaja = { "A la gente le parece una respuesta aburrida pero entienden que así son las cosas,","te recuerdan como un astronauta mediocre y poco más, te da para vivir"};
-		return modeloCajaFinales(textoParaCaja);
-	}
-	
+
 	public static String cajaNarrador33() {
-		String[] textoParaCaja = {"Te adentras en la nube de polvo de la Luna y caminas un rato"};
+		String[] textoParaCaja = { "Te adentras en la nube de polvo de la Luna y caminas un rato" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador34() {
-		String[] textoParaCaja = {"Te estás empezando a aburrir de la Luna cuando de repente ves una sombra a lo lejos "};
+		String[] textoParaCaja = {
+				"Te estás empezando a aburrir de la Luna cuando de repente ves una sombra a lo lejos " };
 		return modeloCajaNarrador(textoParaCaja);
+	}
+
+	public static String cajaNarrador35() {
+		String[] textoParaCaja = { "Al acercarte ves la sombra más nítida" };
+		return modeloCajaNarrador(textoParaCaja);
+	}
+
+	public static String cajaNarrador36() {
+		String[] textoParaCaja = { "Un poder desconocido te impide darte la vuleta",
+				"La sombra se acerca más y se vuelve más nítida" };
+		return modeloCajaNarrador(textoParaCaja);
+	}
+
+	public static String cajaNarrador37() {
+		String[] textoParaCaja = { "Te acercas lo suficiente como para ver lo que parece ser un alien" };
+		return modeloCajaNarrador(textoParaCaja);
+	}
+
+	public static String cajaNarrador38() {
+		String[] textoParaCaja = {
+				"Sigues sin poder alejarte, mientras la sombra se acerca lo suficiente como para distinguir una figura que parece ser un alien" };
+		return modeloCajaNarrador(textoParaCaja);
+	}
+
+	public static String cajaNarrador39() {
+		String[] textoParaCaja = { "Lo que parece ser un alien comienza a hacer ruidos irreconocibles para ti mientras se acerca más" };
+		return modeloCajaNarrador(textoParaCaja);
+	}
+
+	/* Cajas de texto del Protagonista */
+
+	public static String cajaProtaRespuestaRespeto01() {
+		String[] textoParaCaja = { "...",
+				"No puede ser, llevo toda la vida esperando para esto y se me ha olvidado que es lo que iba a hacer" };
+		return modeloCajaProta(textoParaCaja);
+	}
+
+	public static String cajaProtaRespuestaRespeto02() {
+		String[] textoParaCaja = { "(Venga, eso por lo menos tengo que saberlo" };
+		return modeloCajaProta(textoParaCaja);
+	}
+
+	/* Cajas de texto de Otros Personajes */
+
+	public static String cajaJefe1() {
+		String[] textoParaCaja = {
+				"Eso, la fuerza de la gravedad hace que se queme mucho combustible para poder salir" };
+		return modeloCajaOtrosPersonajes(textoParaCaja);
+	}
+
+	public static String cajaJefe2() {
+		String[] textoParaCaja = { "¿Estás bien? ¿Sabes por lo menos a dónde vas no?" };
+		return modeloCajaOtrosPersonajes(textoParaCaja);
+	}
+
+	public static String cajaJefe3() {
+		String[] textoParaCaja = { "Jajaja, Claro que sí, ya verás cómo sale todo bien" };
+		return modeloCajaOtrosPersonajes(textoParaCaja);
+	}
+
+	public static String cajaJefe4(String objetoInventario, String[] inventario) {
+		String[] textoParaCaja = { "Eh... señor esto no es un, " + objetoInventario + ", es un " + inventario[0] };
+		return modeloCajaOtrosPersonajes(textoParaCaja);
+	}
+
+	public static String cajaOtroPersonaje1() {
+		String[] textoParaCaja = { "VOZ: Quedan 3 minutos para el despegue." };
+		return modeloCajaOtrosPersonajes(textoParaCaja);
+	}
+
+	/* Cajas de texto de Final */
+
+	public static String cajaFinal2_1() {
+		String[] textoParaCaja = {
+				"Vuelves a la tierra y comunicas que todo en la Luna está correcto, nada interesante" };
+		return modeloCajaFinales(textoParaCaja);
+	}
+
+	public static String cajaFinal2_2() {
+		String[] textoParaCaja = { "A la gente le parece una respuesta aburrida pero entienden que así son las cosas,",
+				"te recuerdan como un astronauta mediocre y poco más, te da para vivir" };
+		return modeloCajaFinales(textoParaCaja);
+	}
+
+	public static String cajaJefeMuerteRespeto1() {
+		String[] textoParaCaja = { "Vale, espera aquí un momento" };
+		return modeloCajaFinales(textoParaCaja);
+	}
+
+	public static String cajaJefeMuerteRespeto2(String nombre) {
+		String[] textoParaCaja = { nombre + " hemos estado hablando y creemos que va a ser mejor",
+				"que hoy no subas a la nave, deberías irte a casa a descansar" };
+		return modeloCajaFinales(textoParaCaja);
+	}
+
+	public static String cajaMuerteNarrador() {
+		String[] textoParaCaja = { "(Se han ido sin ti)" };
+		return modeloCajaFinales(textoParaCaja);
 	}
 
 }

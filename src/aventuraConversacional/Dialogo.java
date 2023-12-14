@@ -32,8 +32,6 @@ public class Dialogo {
 		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(texto, '=', '|');
 		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.YELLOW);
 	}
-	
-	
 
 	/* Cajas de texto de Inicio */
 
@@ -49,8 +47,6 @@ public class Dialogo {
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
-	
-	
 	/* Cajas de texto de Error */
 
 	public static String cajaErrorInicio() {
@@ -93,9 +89,6 @@ public class Dialogo {
 		String[] textoParaCaja = { "Debe de elegir un numero:", "1 o 2" };
 		return modeloCajaError(textoParaCaja);
 	}
-	
-	
-	
 
 	/* Cajas de texto del Narrador */
 
@@ -112,17 +105,17 @@ public class Dialogo {
 
 	public static String cajaLanzamiento() {
 		String[] textoParaCaja = { "Te preparas para el lanzamiento, antes de subir a la nave,",
-				"tienes que pasar un test rápido de repaso, eres un experto 4así que no es un problema para ti" };
+				"tienes que pasar un test rápido de repaso, eres un experto así que no es un problema para ti" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
 	public static String cajaHoraLLegada01() {
-		String[] textoParaCaja = { "Llegas a las 06:25 al lanzamiento" };
+		String[] textoParaCaja = { "Llegas a las 06:00 al lanzamiento" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
 	public static String cajaHoraLLegada02() {
-		String[] textoParaCaja = { "Llegas a las 06:00 al lanzamiento" };
+		String[] textoParaCaja = { "Llegas a las 06:25 al lanzamiento" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
@@ -341,61 +334,60 @@ public class Dialogo {
 	}
 
 	public static String cajaNarrador39() {
-		String[] textoParaCaja = { "Lo que parece ser un alien comienza a hacer ruidos irreconocibles para ti mientras se acerca más" };
+		String[] textoParaCaja = {
+				"Lo que parece ser un alien comienza a hacer ruidos irreconocibles para ti mientras se acerca más" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador40() {
-		String[] textoParaCaja = { "Le das con el destornillador y le quitas 50HP de un golpe","Alien derrotado"};
+		String[] textoParaCaja = { "Le das con el destornillador y le quitas 50HP de un golpe", "Alien derrotado" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador41() {
-		String[] textoParaCaja = { "El alien se lo come, su vida sube en 10HP"};
+		String[] textoParaCaja = { "El alien se lo come, su vida sube en 10HP" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador42() {
-		String[] textoParaCaja = { "Atacas al Alien"};
+		String[] textoParaCaja = { "Atacas al Alien" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador43() {
-		String[] textoParaCaja = { "El alien consigue defenderse por lo que tu daño se ve reducido."};
+		String[] textoParaCaja = { "El alien consigue defenderse por lo que tu daño se ve reducido." };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador44(int vidaAlien) {
-		String[] textoParaCaja = { "La vida del alien se ve reducida a" + vidaAlien};
+		String[] textoParaCaja = { "La vida del alien se ve reducida a" + vidaAlien };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador45() {
-		String[] textoParaCaja = { "El alien consigue atacarte"};
+		String[] textoParaCaja = { "El alien consigue atacarte" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador46() {
-		String[] textoParaCaja = { "Consigues defenderte del alien por lo que el daño se ve reducido"};
+		String[] textoParaCaja = { "Consigues defenderte del alien por lo que el daño se ve reducido" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador47(int vidaProta) {
-		String[] textoParaCaja = {"Tu vida se ve reducida a" + vidaProta};
+		String[] textoParaCaja = { "Tu vida se ve reducida a" + vidaProta };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador48() {
-		String[] textoParaCaja = { "Intentas hablar con el alien pero es inútil"};
+		String[] textoParaCaja = { "Intentas hablar con el alien pero es inútil" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
+
 	public static String cajaNarrador49() {
-		String[] textoParaCaja = {"El alien te asiesta un golpe"};
+		String[] textoParaCaja = { "El alien te asiesta un golpe" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
-	
-	
 
 	/* Cajas de texto del Protagonista */
 
@@ -409,8 +401,6 @@ public class Dialogo {
 		String[] textoParaCaja = { "(Venga, eso por lo menos tengo que saberlo" };
 		return modeloCajaProta(textoParaCaja);
 	}
-	
-	
 
 	/* Cajas de texto de Otros Personajes */
 
@@ -457,7 +447,7 @@ public class Dialogo {
 		String[] textoParaCaja = { "(Se han ido sin ti)" };
 		return modeloCajaFinales(textoParaCaja);
 	}
-	
+
 	public static String cajaFinal2_1() {
 		String[] textoParaCaja = {
 				"Vuelves a la tierra y comunicas que todo en la Luna está correcto, nada interesante" };
@@ -469,49 +459,56 @@ public class Dialogo {
 				"te recuerdan como un astronauta mediocre y poco más, te da para vivir" };
 		return modeloCajaFinales(textoParaCaja);
 	}
-	
+
 	public static String cajaFinal3_1() {
 		String[] textoParaCaja = { "El alien ha podido contigo" };
 		return modeloCajaFinales(textoParaCaja);
 	}
-	
+
 	public static String cajaFinal3_2() {
-		String[] textoParaCaja = { "Parece ser que atacar al alien no fue la mejor idea", "Mejor suerte la proxima vez" };
+		String[] textoParaCaja = { "Parece ser que atacar al alien no fue la mejor idea",
+				"Mejor suerte la proxima vez" };
 		return modeloCajaFinales(textoParaCaja);
 	}
-	
+
 	public static String cajaFinal4_5() {
 		String[] textoParaCaja = { "No sabes como pero acabas de matar al alien" };
 		return modeloCajaFinales(textoParaCaja);
 	}
-	
+
 	public static String cajaFinal4() {
-		String[] textoParaCaja = { "Vuelves a la tierra, cuando la gente te pide que informes lo que ha pasado les cuentas tu pelea con el alien y te toman por loco, en futuras misiones, otros astronautas van a la Luna y ninguno ve lo que dijiste, definitivamente estás loco y así te recordarán siempre." };
+		String[] textoParaCaja = {
+				"Vuelves a la tierra, cuando la gente te pide que informes lo que ha pasado les cuentas tu pelea con el alien y te toman por loco, en futuras misiones, otros astronautas van a la Luna y ninguno ve lo que dijiste, definitivamente estás loco y así te recordarán siempre." };
 		return modeloCajaFinales(textoParaCaja);
 	}
-	
+
 	public static String cajaFinal5_1() {
-		String[] textoParaCaja = { "Llevas al Alien a la tierra y todos alucinan, es el mayor descubrimiento de la historia, se te recuerda como una de las personas más importantes del mundo " };
+		String[] textoParaCaja = {
+				"Llevas al Alien a la tierra y todos alucinan, es el mayor descubrimiento de la historia, se te recuerda como una de las personas más importantes del mundo " };
 		return modeloCajaFinales(textoParaCaja);
 	}
-	
+
 	public static String cajaFinal5_2() {
-		String[] textoParaCaja = { "Unos años después los aliens salen de la luna y declaran la guerra a los humanos, culpa tuya supongo" };
+		String[] textoParaCaja = {
+				"Unos años después los aliens salen de la luna y declaran la guerra a los humanos, culpa tuya supongo" };
 		return modeloCajaFinales(textoParaCaja);
 	}
-	
+
 	public static String cajaFinal6() {
-		String[] textoParaCaja = { "El Alien toma tu regalo como un claro símbolo de paz y de hecho se sube a tu nave, te lo llevas de vuelta a la tierra y se lo presentas a todo el mundo, los Aliens Lunares se vuelven amigos de la humanidad. Todo el mundo te recuerda como el mejor astronauta de la historia" };
+		String[] textoParaCaja = {
+				"El Alien toma tu regalo como un claro símbolo de paz y de hecho se sube a tu nave, te lo llevas de vuelta a la tierra y se lo presentas a todo el mundo, los Aliens Lunares se vuelven amigos de la humanidad. Todo el mundo te recuerda como el mejor astronauta de la historia" };
 		return modeloCajaFinales(textoParaCaja);
 	}
-	
+
 	public static String cajaFinal7_1() {
-		String[] textoParaCaja = { "El Alien coge las llaves, al tocarlas este desaparece, sin saber que hacer vuelves a la tierra, cuando la gente te pide que informes  lo que ha pasado les cuentas tu pelea con el alien y te toman por loco." };
+		String[] textoParaCaja = {
+				"El Alien coge las llaves, al tocarlas este desaparece, sin saber que hacer vuelves a la tierra, cuando la gente te pide que informes  lo que ha pasado les cuentas tu pelea con el alien y te toman por loco." };
 		return modeloCajaFinales(textoParaCaja);
 	}
-	
+
 	public static String cajaFinal7_2() {
-		String[] textoParaCaja = { "Poco después te informan de que tu jefe lleva 3 días desaparecido, pero la verdad es que te da un poco igual. Eres recordado cómo el astronauta loco." };
+		String[] textoParaCaja = {
+				"Poco después te informan de que tu jefe lleva 3 días desaparecido, pero la verdad es que te da un poco igual. Eres recordado cómo el astronauta loco." };
 		return modeloCajaFinales(textoParaCaja);
 	}
 

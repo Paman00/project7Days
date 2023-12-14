@@ -335,39 +335,21 @@ public class Main {
 			System.out.println(centrarLinea("Ingrese 1, 2, 3, 4, 5 para elegir una respuesta"));
 			opcion = sc.nextInt();
 
-			if (opcion == 2) {
+			if (opcion == 2 || opcion == 3 || opcion == 4 || opcion == 5) {
 				System.out.println(Dialogo.cajaFallorespeto1());
 				contadorFallo++;
 				if (contadorFallo == 1) {
 					respeto--;
+					System.out
+							.println(agregarColor(centrarLinea("Se ha restado 1 de respeto"), Recursos.RED_BACKGROUND));
 				}
-				contadorFallo = 0;
-			} else if (opcion == 3) {
-				System.out.println(Dialogo.cajaFallorespeto1());
-				contadorFallo++;
-				if (contadorFallo == 1) {
-					respeto--;
-				}
-				contadorFallo = 0;
-			} else if (opcion == 4) {
-				System.out.println(Dialogo.cajaFallorespeto1());
-				contadorFallo++;
-				if (contadorFallo == 1) {
-					respeto--;
-				}
-				contadorFallo = 0;
-			} else if (opcion == 5) {
-				System.out.println(Dialogo.cajaFallorespeto1());
-				contadorFallo++;
-				if (contadorFallo == 1) {
-					respeto--;
-				}
-				contadorFallo = 0;
 			} else if (opcion < 1 || opcion > 5) {
 				System.out.println(Dialogo.cajaErrorRespeto1());
 			}
 
 		} while (opcion != 1);
+		// Reiniciamos el valor de la variable usada para escoger las opciones
+		contadorFallo = 0;
 
 		System.out.println("El respeto es de " + respeto);
 
@@ -376,12 +358,7 @@ public class Main {
 			return "perdido1";
 		}
 
-		System.out.println("El respeto es de " + respeto);
-
 		System.out.println(Dialogo.cajaJefe1());
-
-		// Reiniciamos el valor de la variable usada para escoger las opciones
-		contadorFallo = 0;
 
 		System.out.println(agregarColor(centrarLinea("\n¿Llevas algún objeto que declarar?"), Recursos.PURPLE));
 		System.out.println("1. Bola de Nieve de Cristal");
@@ -421,6 +398,7 @@ public class Main {
 			System.out.println(Dialogo.cajaJefe4(objetoInventario, inventario));
 
 			respeto--;
+			System.out.println(centrarLinea("Se ha restado 1 de respeto"));
 		}
 
 		System.out.println("El respeto es de " + respeto);
@@ -441,9 +419,6 @@ public class Main {
 		sc.nextLine();
 		System.out.println(Dialogo.cajaProtaRespuestaRespeto02());
 
-		// Reiniciamos el valor de la variable usada para escoger las opciones
-		contadorFallo = 0;
-
 		do {
 
 			System.out.println("\n1. Marte");
@@ -457,61 +432,30 @@ public class Main {
 			System.out.println(centrarLinea("\nIngrese 1, 2, 3, 4, 5, 6, 7 o 8 para elegir una ubicación"));
 			opcion = sc.nextInt();
 
-			if (opcion == 1) {
+			if (opcion == 1 || opcion == 2 || opcion == 3 || opcion == 5 || opcion == 6 || opcion == 7) {
 				System.out.println(Dialogo.cajaFallorespeto2());
 				contadorFallo++;
 				if (contadorFallo == 1) {
 					respeto--;
+					System.out
+							.println(agregarColor(centrarLinea("Se ha restado 1 de respeto"), Recursos.RED_BACKGROUND));
 				}
-				contadorFallo = 0;
-			} else if (opcion == 2) {
-				System.out.println(Dialogo.cajaFallorespeto2());
-				contadorFallo++;
-				if (contadorFallo == 1) {
-					respeto--;
-				}
-				contadorFallo = 0;
-			} else if (opcion == 3) {
-				System.out.println(Dialogo.cajaFallorespeto2());
-				contadorFallo++;
-				if (contadorFallo == 1) {
-					respeto--;
-				}
-				contadorFallo = 0;
-			} else if (opcion == 5) {
-				System.out.println(Dialogo.cajaFallorespeto2());
-				contadorFallo++;
-				if (contadorFallo == 1) {
-					respeto--;
-				}
-				contadorFallo = 0;
-			} else if (opcion == 6) {
-				System.out.println(Dialogo.cajaFallorespeto2());
-				contadorFallo++;
-				if (contadorFallo == 1) {
-					respeto--;
-				}
-				contadorFallo = 0;
-			} else if (opcion == 7) {
-				System.out.println(Dialogo.cajaFallorespeto2());
-				contadorFallo++;
-				if (contadorFallo == 1) {
-					respeto--;
-				}
-				contadorFallo = 0;
 			} else if (opcion == 8) {
 				System.out.println(Dialogo.cajaFallorespeto2());
 				opcion = sc.nextInt();
 				contadorFallo++;
 				if (contadorFallo == 1) {
 					respeto--;
+					System.out
+							.println(agregarColor(centrarLinea("Se ha restado 1 de respeto"), Recursos.RED_BACKGROUND));
 				}
-				contadorFallo = 0;
 			} else if (opcion < 1 || opcion > 8) {
 				System.out.println(Dialogo.cajaErrorRespeto2());
 			}
 
 		} while (opcion != 4);
+		// Reiniciamos el valor de la variable usada para escoger las opciones
+		contadorFallo = 0;
 
 		System.out.println(Dialogo.cajaJefe3());
 

@@ -350,6 +350,16 @@ public class Dialogo {
 		return modeloCajaNarrador(textoParaCaja);
 	}
 	
+	public static String cajaNarrador40() {
+		String[] textoParaCaja = { "Le das con el destornillador y le quitas 50HP de un golpe","Alien derrotado"};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador41() {
+		String[] textoParaCaja = { "El alien se lo come, su vida sube en 10HP"};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
 	
 
 	/* Cajas de texto del Protagonista */
@@ -425,18 +435,48 @@ public class Dialogo {
 		return modeloCajaFinales(textoParaCaja);
 	}
 	
-	public static String cajaFinal3() {
+	public static String cajaFinal3_1() {
+		String[] textoParaCaja = { "El alien ha podido contigo" };
+		return modeloCajaFinales(textoParaCaja);
+	}
+	
+	public static String cajaFinal3_2() {
+		String[] textoParaCaja = { "Parece ser que atacar al alien no fue la mejor idea", "Mejor suerte la proxima vez" };
+		return modeloCajaFinales(textoParaCaja);
+	}
+	
+	public static String cajaFinal4_5() {
+		String[] textoParaCaja = { "No sabes como pero acabas de matar al alien" };
+		return modeloCajaFinales(textoParaCaja);
+	}
+	
+	public static String cajaFinal4() {
 		String[] textoParaCaja = { "Vuelves a la tierra, cuando la gente te pide que informes lo que ha pasado les cuentas tu pelea con el alien y te toman por loco, en futuras misiones, otros astronautas van a la Luna y ninguno ve lo que dijiste, definitivamente estás loco y así te recordarán siempre." };
 		return modeloCajaFinales(textoParaCaja);
 	}
 	
-	public static String cajaFinal4_1() {
+	public static String cajaFinal5_1() {
 		String[] textoParaCaja = { "Llevas al Alien a la tierra y todos alucinan, es el mayor descubrimiento de la historia, se te recuerda como una de las personas más importantes del mundo " };
 		return modeloCajaFinales(textoParaCaja);
 	}
 	
-	public static String cajaFinal4_2() {
+	public static String cajaFinal5_2() {
 		String[] textoParaCaja = { "Unos años después los aliens salen de la luna y declaran la guerra a los humanos, culpa tuya supongo" };
+		return modeloCajaFinales(textoParaCaja);
+	}
+	
+	public static String cajaFinal6() {
+		String[] textoParaCaja = { "El Alien toma tu regalo como un claro símbolo de paz y de hecho se sube a tu nave, te lo llevas de vuelta a la tierra y se lo presentas a todo el mundo, los Aliens Lunares se vuelven amigos de la humanidad. Todo el mundo te recuerda como el mejor astronauta de la historia" };
+		return modeloCajaFinales(textoParaCaja);
+	}
+	
+	public static String cajaFinal7_1() {
+		String[] textoParaCaja = { "El Alien coge las llaves, al tocarlas este desaparece, sin saber que hacer vuelves a la tierra, cuando la gente te pide que informes  lo que ha pasado les cuentas tu pelea con el alien y te toman por loco." };
+		return modeloCajaFinales(textoParaCaja);
+	}
+	
+	public static String cajaFinal7_2() {
+		String[] textoParaCaja = { "Poco después te informan de que tu jefe lleva 3 días desaparecido, pero la verdad es que te da un poco igual. Eres recordado cómo el astronauta loco." };
 		return modeloCajaFinales(textoParaCaja);
 	}
 

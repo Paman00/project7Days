@@ -127,70 +127,62 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-
 		// Damos la introducción al usuario y esperamos a que presione START
 		System.out.println(Dialogo.cajaIntroduccion());
 		System.out.println(centrarLinea("Presione START para iniciar"));
 		sc.nextLine();
 		String finalDeLaPartida = aventura();
 
-		// Texto Fin de la partida 1
 		if (finalDeLaPartida.equals("perdido1")) {
-			System.out.println(centrarLinea("Presione START para continuar"));
-			sc.nextLine();
+			// Texto Fin de la partida 1
 			System.out.println(Dialogo.cajaJefeMuerteRespeto1());
 			// System.out.println(Dialogo.cajaJefeMuerteRespeto2());
+			System.out.println(Dialogo.cajaMuerteNarrador());
+			System.out.println(centrarLinea("Presione START para continuar"));
 			System.out.println(Recursos.despegue);
 			System.out.println(Dialogo.cajaMuerteNarrador());
 			System.out.println(centrarLinea("Presione START para continuar"));
 			sc.nextLine();
-			System.out.println(Recursos.gameOver);
+			System.out.println(agregarColor(Recursos.gameOver, Recursos.RED + Recursos.BLACK_BACKGROUND));
 
-			// Texto Fin de la partida 2
 		} else if (finalDeLaPartida.equals("perdido2")) {
+			// Texto Fin de la partida 2
 			System.out.println(Dialogo.cajaFinal2_1());
 			System.out.println(Dialogo.cajaFinal2_2());
 			System.out.println(centrarLinea("Presione START para continuar"));
 			sc.nextLine();
-			System.out.println(Recursos.gameOver);
+			System.out.println(agregarColor(Recursos.gameOver, Recursos.RED + Recursos.WHITE_BACKGROUND));
 
-			// Texto Fin de la partida 3
 		} else if (finalDeLaPartida.equals("perdido3")) {
-			System.out.println(centrarLinea("Presione START para continuar"));
-			sc.nextLine();
+			// Texto Fin de la partida 3
 			System.out.println(Dialogo.cajaFinal3_1());
 			System.out.println(Dialogo.cajaFinal3_2());
 			System.out.println(centrarLinea("Presione START para continuar"));
 			sc.nextLine();
 			System.out.println(Recursos.gameOver);
 
-			// Texto Fin de la partida 4
 		} else if (finalDeLaPartida.equals("perdido4")) {
+			// Texto Fin de la partida 4
 			System.out.println(Dialogo.cajaFinal4());
 			System.out.println(Recursos.finDelJuego);
 
-			// Texto Fin de la partida 5
 		} else if (finalDeLaPartida.equals("perdido5")) {
-			System.out.println(centrarLinea("Presione START para continuar"));
-			sc.nextLine();
+			// Texto Fin de la partida 5
 			System.out.println(Dialogo.cajaFinal5_1());
 			System.out.println(Dialogo.cajaFinal5_2());
 			System.out.println(centrarLinea("Presione START para continuar"));
 			sc.nextLine();
 			System.out.println(Recursos.finDelJuego);
 
-			// Texto Fin de la partida 6
 		} else if (finalDeLaPartida.equals("perdido6")) {
-			System.out.println(centrarLinea("Presione START para continuar"));
-			sc.nextLine();
+			// Texto Fin de la partida 6
 			System.out.println(Dialogo.cajaFinal6());
 			System.out.println(centrarLinea("Presione START para continuar"));
 			sc.nextLine();
 			System.out.println(Recursos.finDelJuego);
-			// Texto Fin de la partida 7
+
 		} else if (finalDeLaPartida.equals("perdido7")) {
-			System.out.println(centrarLinea("Presione START para continuar"));
-			sc.nextLine();
+			// Texto Fin de la partida 7
 			System.out.println(Dialogo.cajaFinal7_1());
 			System.out.println(Dialogo.cajaFinal7_2());
 			System.out.println(centrarLinea("Presione START para continuar"));
@@ -200,12 +192,11 @@ public class Main {
 	}
 
 	public static String aventura() {
-
 		// Declaramos las variables que vamos a usar
 		String nombre;
 		int opcion;
 		String[] inventario = new String[5];
-		int respeto = 5;
+		int respeto = 3;
 		int contadorFallo = 0;
 		String objetoInventario = null;
 		boolean objetoEncontrado = false;
@@ -436,17 +427,8 @@ public class Main {
 			System.out.println(centrarLinea("Ingrese 1, 2, 3, 4, 5, 6, 7 o 8 para elegir una ubicación"));
 			opcion = sc.nextInt();
 
-			if (opcion == 1 || opcion == 2 || opcion == 3 || opcion == 5 || opcion == 6 || opcion == 7) {
+			if (opcion == 1 || opcion == 2 || opcion == 3 || opcion == 5 || opcion == 6 || opcion == 7 || opcion == 8) {
 				System.out.println(Dialogo.cajaFallorespeto2());
-				contadorFallo++;
-				if (contadorFallo == 1) {
-					respeto--;
-					System.out
-							.println(agregarColor(centrarLinea("Se ha restado 1 de respeto"), Recursos.RED_BACKGROUND));
-				}
-			} else if (opcion == 8) {
-				System.out.println(Dialogo.cajaFallorespeto2());
-				opcion = sc.nextInt();
 				contadorFallo++;
 				if (contadorFallo == 1) {
 					respeto--;
@@ -610,12 +592,12 @@ public class Main {
 			System.out.println(Dialogo.cajaNarrador27());
 			inteligencia++;
 			System.out.println(
-					centrarLinea(agregarColor("La inteligencia de " + nombre + "aumenta en 1", Recursos.PURPLE)));
+					centrarLinea(agregarColor("La inteligencia de " + nombre + " aumenta en 1", Recursos.PURPLE)));
 		} else if (opcion == 4) {
 			System.out.println(Dialogo.cajaNarrador28());
 			cansancio++;
-			System.out
-					.println(centrarLinea(agregarColor("El cansacio de " + nombre + "aumenta en 1", Recursos.PURPLE)));
+			System.out.println(
+					centrarLinea(agregarColor("El cansancio de " + nombre + " aumenta en 1", Recursos.PURPLE)));
 		}
 
 		System.out.println(centrarLinea("Presione START para continuar"));
@@ -833,8 +815,6 @@ public class Main {
 	public static void resetBuffer() {
 		sc.nextLine();
 	}
-
-	// TODO pasar los diaologos a cajas en Dialogo
 
 	public static int realizarAtaque(String nombre, int vidaAlien, int ataqueProta, int defensaAlien) {
 

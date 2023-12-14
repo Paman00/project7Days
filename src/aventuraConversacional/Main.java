@@ -167,7 +167,7 @@ public class Main {
 			System.out.println(Dialogo.cajaFinal2_2());
 			System.out.println(centrarLinea("Presione START para continuar"));
 			sc.nextLine();
-			System.out.println(Recursos.finDelJuego);
+			System.out.println(agregarColor(Recursos.gameOver, Recursos.RED + Recursos.BLACK_BACKGROUND));
 		} else if (finalDeLaPartida.equals("final3")) {
 			// Texto Fin de la partida 3
 			System.out.println(Dialogo.cajaFinal3_1());
@@ -179,7 +179,7 @@ public class Main {
 		} else if (finalDeLaPartida.equals("final4")) {
 			// Texto Fin de la partida 4
 			System.out.println(Dialogo.cajaFinal4());
-			System.out.println(Recursos.finDelJuego);
+			System.out.println("\n" + Recursos.finDelJuego);
 
 		} else if (finalDeLaPartida.equals("final5")) {
 			// Texto Fin de la partida 5
@@ -187,14 +187,14 @@ public class Main {
 			System.out.println(Dialogo.cajaFinal5_2());
 			System.out.println(centrarLinea("Presione START para continuar"));
 			sc.nextLine();
-			System.out.println(Recursos.finDelJuego);
+			System.out.println("\n" + Recursos.finDelJuego);
 
 		} else if (finalDeLaPartida.equals("final6")) {
 			// Texto Fin de la partida 6
 			System.out.println(Dialogo.cajaFinal6());
 			System.out.println(centrarLinea("Presione START para continuar"));
 			sc.nextLine();
-			System.out.println(Recursos.finDelJuego);
+			System.out.println("\n" + Recursos.finDelJuego);
 
 		} else if (finalDeLaPartida.equals("final7")) {
 			// Texto Fin de la partida 7
@@ -202,7 +202,7 @@ public class Main {
 			System.out.println(Dialogo.cajaFinal7_2());
 			System.out.println(centrarLinea("Presione START para continuar"));
 			sc.nextLine();
-			System.out.println(Recursos.finDelJuego);
+			System.out.println("\n" + Recursos.finDelJuego);
 		}
 	}
 
@@ -562,7 +562,7 @@ public class Main {
 
 				if (opcion == 1) {
 					System.out.println(Dialogo.cajaNarrador20());
-					return "perdido2";
+					return "final2";
 				} else if (opcion == 2) {
 					System.out.println(Dialogo.cajaNarrador21(nombre));
 				}
@@ -686,6 +686,8 @@ public class Main {
 		System.out.println("¿Qué harás?");
 
 		while (vidaProta > 0 && vidaAlien > 0) {
+			System.out.println("\n" + agregarColor(centrarTexto("Vida de " + nombre + ": " + vidaProta), Recursos.WHITE_BACKGROUND + Recursos.BLACK));
+			System.out.println(agregarColor(centrarTexto("Vida del alien: " + vidaAlien), Recursos.WHITE_BACKGROUND + Recursos.BLACK) + "\n");
 
 			System.out.println("\n1. Luchar");
 			System.out.println("2. Hablar");
@@ -758,10 +760,15 @@ public class Main {
 						}
 
 					} else if (inventario[0].equals("Pájaro de Madera")) {
+						inventario[0] = "Pájaro de Madera Roto";
+						vidaAlien += 10;
 						System.out.println(Dialogo.cajaNarrador41());
-						vidas[1] += 10;
-					} else if (inventario[1].equals("llaves")) {
-						return "final7";
+						// Reset de Buffer por error
+						resetBuffer();
+					} else if (inventario[1] != null) {
+						if(inventario[1].equals("llaves")) {
+							return "final7";
+						}
 					}
 				}
 

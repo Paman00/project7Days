@@ -292,7 +292,7 @@ public class Main {
 		// pedirlo
 		while (opcion != 1 && opcion != 2) {
 			System.out.println(Dialogo.cajaError3());
-			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
+			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 			opcion = sc.nextInt();
 		}
 
@@ -357,12 +357,12 @@ public class Main {
 		System.out.println("2. Destornillador");
 		System.out.println("3. Pájaro de Madera");
 		System.out.println("4. No");
-		System.out.println(centrarLinea("Ingrese 1, 2 o 3 para elegir un arma"));
+		System.out.println(centrarLinea("Ingrese 1, 2 o 3 para elegir una opción"));
 		opcion = sc.nextInt();
 
 		while (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4) {
 			System.out.println(Dialogo.cajaError2());
-			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
+			System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir una opción"));
 			opcion = sc.nextInt();
 		}
 
@@ -542,7 +542,7 @@ public class Main {
 
 			while (opcion != 1 && opcion != 2) {
 				System.out.println(Dialogo.cajaError3());
-				System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
+				System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 				opcion = sc.nextInt();
 			}
 
@@ -556,7 +556,7 @@ public class Main {
 
 				while (opcion != 1 && opcion != 2) {
 					System.out.println(Dialogo.cajaError3());
-					System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
+					System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 					opcion = sc.nextInt();
 				}
 
@@ -588,7 +588,7 @@ public class Main {
 		
 		while (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4) {
 			System.out.println(Dialogo.cajaError2());
-			System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir un arma"));
+			System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir una opción"));
 			opcion = sc.nextInt();
 		}
 
@@ -623,7 +623,7 @@ public class Main {
 
 			while (opcion != 1 && opcion != 2) {
 				System.out.println(Dialogo.cajaError3());
-				System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
+				System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 				opcion = sc.nextInt();
 			}
 
@@ -648,7 +648,7 @@ public class Main {
 
 		while (opcion != 1 && opcion != 2) {
 			System.out.println(Dialogo.cajaError3());
-			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
+			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 			opcion = sc.nextInt();
 		}
 
@@ -670,7 +670,7 @@ public class Main {
 
 		while (opcion != 1 && opcion != 2) {
 			System.out.println(Dialogo.cajaError3());
-			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
+			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 			opcion = sc.nextInt();
 		}
 
@@ -702,7 +702,7 @@ public class Main {
 
 			while (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4) {
 				System.out.println(Dialogo.cajaError2());
-				System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir un arma"));
+				System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir una opción"));
 				opcion = sc.nextInt();
 			}
 
@@ -733,7 +733,7 @@ public class Main {
 
 						while (opcion != 1 && opcion != 2) {
 							System.out.println(Dialogo.cajaError3());
-							System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
+							System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 							opcion = sc.nextInt();
 						}
 
@@ -749,7 +749,7 @@ public class Main {
 
 							while (opcion != 1 && opcion != 2) {
 								System.out.println(Dialogo.cajaError3());
-								System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
+								System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 								opcion = sc.nextInt();
 							}
 
@@ -799,7 +799,7 @@ public class Main {
 
 			while (opcion != 1 && opcion != 2) {
 				System.out.println(Dialogo.cajaError3());
-				System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
+				System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 				opcion = sc.nextInt();
 			}
 

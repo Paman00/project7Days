@@ -63,11 +63,6 @@ public class Dialogo {
 		return modeloCajaError(textoParaCaja);
 	}
 
-	public static String cajaErrorSeleccionarModo() {
-		String[] textoParaCaja = { "Debe de elegir un numero:", "1 o 2" };
-		return modeloCajaError(textoParaCaja);
-	}
-
 	public static String cajaFallorespeto1() {
 		String[] textoParaCaja = { "Ups, parece que aún no estás muy despierto, esa no es la respuesta correcta,",
 				"venga, vuelve a intentarlo, te la sabes." };
@@ -357,6 +352,46 @@ public class Dialogo {
 	
 	public static String cajaNarrador41() {
 		String[] textoParaCaja = { "El alien se lo come, su vida sube en 10HP"};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador42() {
+		String[] textoParaCaja = { "Atacas al Alien"};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador43() {
+		String[] textoParaCaja = { "El alien consigue defenderse por lo que tu daño se ve reducido."};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador44(int vidaAlien) {
+		String[] textoParaCaja = { "La vida del alien se ve reducida a" + vidaAlien};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador45() {
+		String[] textoParaCaja = { "El alien consigue atacarte"};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador46() {
+		String[] textoParaCaja = { "Consigues defenderte del alien por lo que el daño se ve reducido"};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador47(int vidaProta) {
+		String[] textoParaCaja = {"Tu vida se ve reducida a" + vidaProta};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador48() {
+		String[] textoParaCaja = { "Intentas hablar con el alien pero es inútil"};
+		return modeloCajaNarrador(textoParaCaja);
+	}
+	
+	public static String cajaNarrador49() {
+		String[] textoParaCaja = {"El alien te asiesta un golpe"};
 		return modeloCajaNarrador(textoParaCaja);
 	}
 	

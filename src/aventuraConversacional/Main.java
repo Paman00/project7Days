@@ -25,36 +25,37 @@ public class Main {
 	public static int[] realizarAtaque(int vidaProta, int ataqueProta, int defensaProta, int vidaAlien, int ataqueAlien,
 			int defensaAlien) {
 
-		System.out.println("\n Atacas al alien");
+		System.out.println(Dialogo.cajaNarrador42());
 
 		int probabilidadDefensaAlien = (int) (Math.random() * 4 + 1);
 
 		if (probabilidadDefensaAlien == 1) {
-			System.out.println("El alien consigue defenderse por lo que tu daño se ve reducido.");
+			System.out.println(Dialogo.cajaNarrador43());
 			vidaAlien = vidaAlien - (ataqueProta - defensaAlien);
 		} else {
 			vidaAlien = vidaAlien - ataqueProta;
 		}
 
-		System.out.println("La vida del alien se ve reducida a" + vidaAlien);
+		System.out.println(Dialogo.cajaNarrador44(vidaAlien));
 
 		// Añadimos la posibilidad de que el alien ataque
 
 		int probabilidadAtaqueAlien = (int) (Math.random() * 5 + 1);
 
 		if (probabilidadAtaqueAlien == 1) {
-			System.out.println("El alien consigue atacarte al alien");
+
+			System.out.println(Dialogo.cajaNarrador45());
 
 			int probabilidadDefensaProta = (int) (Math.random() * 4 + 1);
 
 			if (probabilidadDefensaProta == 1) {
-				System.out.println("Cconsigues defenderte del alien por lo que el daño se ve reducido.");
+				System.out.println(Dialogo.cajaNarrador46());
 				vidaProta = vidaProta - (ataqueAlien - defensaProta);
 			} else {
 				vidaProta = vidaProta - ataqueAlien;
 			}
 
-			System.out.println("Tu vida se ve reducida a" + vidaProta);
+			System.out.println(Dialogo.cajaNarrador47(vidaProta));
 		}
 
 		// Devolvemos las vidas actualizadas en un array
@@ -76,13 +77,13 @@ public class Main {
 	public static int[] hablar(int vidaProta, int ataqueProta, int defensaProta, int vidaAlien, int ataqueAlien,
 			int defensaAlien) {
 
-		System.out.println("Intentas hablar con el alien pero es inútil");
-		System.out.println("El alien te asiesta un golpe");
+		System.out.println(Dialogo.cajaNarrador48());
+		System.out.println(Dialogo.cajaNarrador49());
 
 		int probabilidadDefensaProta = (int) (Math.random() * 4 + 1);
 
 		if (probabilidadDefensaProta == 1) {
-			System.out.println("Consigues defenderte del alien por lo que el daño se ve reducido.");
+			System.out.println(Dialogo.cajaNarrador46());
 			vidaProta = vidaProta - (ataqueAlien - defensaProta);
 		} else {
 			vidaProta = vidaProta - ataqueAlien;
@@ -94,8 +95,8 @@ public class Main {
 	}
 
 	/**
-	 * El Prota intenta huir del alien sindo esto inutil y el alien le ataca y
-	 * con una probabilidad el Prota se puede defender
+	 * El Prota intenta huir del alien sindo esto inutil y el alien le ataca y con
+	 * una probabilidad el Prota se puede defender
 	 * 
 	 * @param vidaProta    Numero entero correspondiente a la vida del Prota
 	 * @param vidaAlien    Numero entero correspondiente a la vida del alien
@@ -108,13 +109,13 @@ public class Main {
 	public static int[] huir(String nombre, int vidaProta, int ataqueProta, int defensaProta, int vidaAlien,
 			int ataqueAlien, int defensaAlien) {
 
-		System.out.println("Intentas huir pero es inútil");
-		System.out.println("El alien te asiesta un golpe");
+		System.out.println(Dialogo.cajaNarrador48());
+		System.out.println(Dialogo.cajaNarrador49());
 
 		int probabilidadDefensaProta = (int) (Math.random() * 4 + 1);
-
+		System.out.println(Dialogo.cajaNarrador46());
 		if (probabilidadDefensaProta == 1) {
-			System.out.println("Cconsigues defenderte del alien por lo que el daño se ve reducido.");
+
 			vidaProta = vidaProta - (ataqueAlien - defensaProta);
 		} else {
 			vidaProta = vidaProta - ataqueAlien;
@@ -125,7 +126,7 @@ public class Main {
 
 	}
 
-	public static void main(String[] args, String nombre) {
+	public static void main(String[] args) {
 
 		// Damos la introducción al usuario y esperamos a que presione START
 		System.out.println(Dialogo.cajaIntroduccion());
@@ -136,7 +137,7 @@ public class Main {
 		// Texto Fin de la partida 1
 		if (finalDeLaPartida.equals("perdido1")) {
 			System.out.println(Dialogo.cajaJefeMuerteRespeto1());
-			System.out.println(Dialogo.cajaJefeMuerteRespeto2(nombre));
+			// System.out.println(Dialogo.cajaJefeMuerteRespeto2());
 			System.out.println(Recursos.despegue);
 			System.out.println(Dialogo.cajaMuerteNarrador());
 
@@ -267,8 +268,8 @@ public class Main {
 
 		// Si el usuario ingresa un numero que no corresponde al objeto, volver a
 		// pedirlo
-		while (opcion != 1 && opcion != 2 && opcion != 3) {
-			System.out.println(Dialogo.cajaErrorSeleccionarModo());
+		while (opcion != 1 && opcion != 2) {
+			System.out.println(Dialogo.cajaError3());
 			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
 			opcion = sc.nextInt();
 		}
@@ -276,12 +277,16 @@ public class Main {
 		// Reset de Buffer por error
 		resetBuffer();
 
-		System.out.println(Recursos.naveAntesDeDespegar);
 		if (opcion == 1) {
 			System.out.println(Dialogo.cajaHoraLLegada01());
 		} else if (opcion == 2) {
 			System.out.println(Dialogo.cajaHoraLLegada02());
 		}
+
+		System.out.println(centrarLinea("Presione START para continuar"));
+		sc.nextLine();
+
+		System.out.println(Recursos.naveAntesDeDespegar);
 		System.out.println(centrarLinea("Presione START para continuar"));
 		sc.nextLine();
 
@@ -333,6 +338,8 @@ public class Main {
 			}
 
 		} while (opcion != 1);
+
+		System.out.println("El respeto es de " + respeto);
 
 		// Si el respeto llega a 0, se acaba la partida y retorna el texto clave
 		if (respeto <= 0) {
@@ -477,6 +484,8 @@ public class Main {
 		} while (opcion != 4);
 
 		System.out.println(Dialogo.cajaJefe3());
+
+		System.out.println("El respeto es de " + respeto);
 
 		if (respeto <= 0) {
 			return "perdido1";
@@ -634,6 +643,9 @@ public class Main {
 					.println(centrarLinea(agregarColor("El cansacio de " + nombre + "aumenta en 1", Recursos.PURPLE)));
 		}
 
+		System.out.println(centrarLinea("Presione START para continuar"));
+		sc.nextLine();
+
 		System.out.println(Dialogo.cajaNarrador29());
 		System.out.println(Dialogo.cajaNarrador30());
 		System.out.println(Dialogo.cajaNarrador31());
@@ -693,6 +705,9 @@ public class Main {
 			sc.nextLine();
 			System.out.println(Recursos.menosSombra);
 		}
+
+		System.out.println(centrarLinea("Presione START para continuar"));
+		sc.nextLine();
 
 		System.out.println("¿Qué haces?");
 		System.out.println("\n1. Acercarse más");

@@ -231,7 +231,7 @@ public class Dialogo {
 	}
 
 	public static String cajaNarrador21(String nombre) {
-		String[] textoParaCaja = { nombre + "Saca valor y decide continuar" };
+		String[] textoParaCaja = { nombre + " Saca valor y decide continuar" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 

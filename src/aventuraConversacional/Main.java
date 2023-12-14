@@ -709,6 +709,8 @@ public class Main {
 		} else {
 			vidaAlien = vidaAlien - ataqueProta;
 		}
+		
+		System.out.println("La vida del alien se ve reducida a" + vidaAlien);
 
 		// Añadimos la posibilidad de que el alien ataque
 
@@ -725,6 +727,8 @@ public class Main {
 			} else {
 				vidaProta = vidaProta - ataqueAlien;
 			}
+			
+			System.out.println("Tu vida se ve reducida a" + vidaProta);
 		}
 
 		// Devolvemos las vidas actualizadas en un array

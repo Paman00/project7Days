@@ -32,6 +32,8 @@ public class Dialogo {
 		String textoEnCaja = FuncionesDialogo.formatearTextoCajaPersonalizada(texto, '=', '|');
 		return FuncionesDialogo.agregarColor(textoEnCaja, Recursos.BLACK_BACKGROUND + Recursos.YELLOW);
 	}
+	
+	
 
 	/* Cajas de texto de Inicio */
 
@@ -47,6 +49,8 @@ public class Dialogo {
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
+	
+	
 	/* Cajas de texto de Error */
 
 	public static String cajaErrorInicio() {
@@ -94,6 +98,9 @@ public class Dialogo {
 		String[] textoParaCaja = { "Debe de elegir un numero:", "1 o 2" };
 		return modeloCajaError(textoParaCaja);
 	}
+	
+	
+	
 
 	/* Cajas de texto del Narrador */
 
@@ -334,7 +341,7 @@ public class Dialogo {
 
 	public static String cajaNarrador38() {
 		String[] textoParaCaja = {
-				"Sigues sin poder alejarte, mientras la sombra se acerca lo suficiente como para distinguir una figura que parece ser un alien" };
+				"No puedes alejarte debido a un poder misterioso, mientras la sombra se acerca lo suficiente como para distinguir una figura que parece ser un alien" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
@@ -342,6 +349,8 @@ public class Dialogo {
 		String[] textoParaCaja = { "Lo que parece ser un alien comienza a hacer ruidos irreconocibles para ti mientras se acerca más" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
+	
+	
 
 	/* Cajas de texto del Protagonista */
 
@@ -355,6 +364,8 @@ public class Dialogo {
 		String[] textoParaCaja = { "(Venga, eso por lo menos tengo que saberlo" };
 		return modeloCajaProta(textoParaCaja);
 	}
+	
+	
 
 	/* Cajas de texto de Otros Personajes */
 

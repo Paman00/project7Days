@@ -105,7 +105,7 @@ public class Dialogo {
 
 	public static String cajaLanzamiento() {
 		String[] textoParaCaja = { "Te preparas para el lanzamiento, antes de subir a la nave,",
-				"tienes que pasar un test rápido de repaso, eres un experto así que no es un problema para ti" };
+				"tienes que pasar un test rápido de repaso, eres un experto así que no es un problema para tí" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
@@ -174,7 +174,7 @@ public class Dialogo {
 
 	public static String cajaNarrador11() {
 		String[] textoParaCaja = {
-				"Vamos a ir a explorar la luna por primera vez desde que la extraña nube de polvo la envolvió hace 2 años, desde entonces hemos perdido toda pista de qué está pasando allí, todos los rovers que hemos mandado acaban con la cámara totalmente tapada, necesitamos que alguien vaya allí en persona para ver qué está pasando y de dónde viene ese polvoS" };
+				"Vamos a ir a explorar la luna por primera vez desde que la extraña nube de polvo la envolvió hace 2 años, desde entonces hemos perdido toda pista de qué está pasando allí, todos los rovers que hemos mandado acaban con la cámara totalmente tapada, necesitamos que alguien vaya allí en persona para ver qué está pasando y de dónde viene ese polvo." };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 

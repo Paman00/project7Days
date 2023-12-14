@@ -588,7 +588,7 @@ public class Main {
 		
 		while (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4) {
 			System.out.println(Dialogo.cajaError2());
-			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
+			System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir un arma"));
 			opcion = sc.nextInt();
 		}
 

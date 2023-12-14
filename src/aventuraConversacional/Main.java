@@ -21,7 +21,7 @@ public class Main {
 		boolean finDeLaPartida = false;
 		int inteligencia = 0;
 		int cansancio = 0;
-		int contadorEspera=0;
+		int contadorEspera = 0;
 
 		// Damos la introducción al usuario y esperamos a que presione START
 		System.out.println(Dialogo.cajaIntroduccion());
@@ -375,9 +375,9 @@ public class Main {
 			} else if (opcion < 1 || opcion > 4) {
 				System.out.println(Dialogo.cajaError2());
 			}
-			
-		// Reiniciamos el valor de la variable usada para escoger las opciones
-		opcion = 0;
+
+			// Reiniciamos el valor de la variable usada para escoger las opciones
+			opcion = 0;
 		} while (opcion != 4);
 
 		System.out.println(Dialogo.cajaNarrador13());
@@ -487,25 +487,25 @@ public class Main {
 					System.out.println("2. Dar una vuelta y explorar la Luna");
 					System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 					opcion = sc.nextInt();
-					
-					if(opcion ==1) {
+
+					if (opcion == 1) {
 						contadorEspera++;
-						if (contadorEspera==5) {
+						if (contadorEspera == 5) {
 							System.out.println(Dialogo.cajaNarrador32());
 							finDeLaPartida = true;
 						}
 					}
 				}
 			} else if (opcion == 2) {
-				System.out.println(Dialogo.cajaNarrador33()); //como 33
+				System.out.println(Dialogo.cajaNarrador33()); // como 33
 				System.out.println(Dialogo.cajaNarrador34());
 				System.out.println(Recursos.sombra);
 				System.out.println("\n1. Acercarse más");
 				System.out.println("2. Media Vuelta");
 				System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 				opcion = sc.nextInt();
-			}else if(opcion <1 || opcion > 2) {
-				//TODO añadir error numero introducido erroneo
+			} else if (opcion < 1 || opcion > 2) {
+				// TODO añadir error numero introducido erroneo
 			}
 
 		}
@@ -519,10 +519,9 @@ public class Main {
 		 */
 
 		/*
-		 * Texto Fin de la partida 2
-		 * system.out.println(Dialogo.cajaFinal2_1());
+		 * Texto Fin de la partida 2 system.out.println(Dialogo.cajaFinal2_1());
 		 * system.out.println(Dialogo.cajaFinal2_2());
-		*/
+		 */
 	}
 
 	/**

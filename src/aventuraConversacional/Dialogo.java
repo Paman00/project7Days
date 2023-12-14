@@ -141,7 +141,7 @@ public class Dialogo {
 	}
 
 	public static String cajaNarrador05(String[] inventario) {
-		String[] textoParaCaja = { "Solo llevas" + inventario[0] + ", igual es poco,",
+		String[] textoParaCaja = { "Solo llevas " + inventario[0] + ", igual es poco,",
 				"¿Quieres buscar algo más que llevarte?" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
@@ -249,7 +249,7 @@ public class Dialogo {
 
 	public static String cajaNarrador24() {
 		String[] textoParaCaja = {
-				"Tendrás que elegir cómo usar esos días y prepararte para la investagión en la Luna" };
+				"Tendrás que elegir cómo usar esos días y prepararte para la investigación en la Luna" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
@@ -317,7 +317,7 @@ public class Dialogo {
 	}
 
 	public static String cajaNarrador36() {
-		String[] textoParaCaja = { "Un poder desconocido te impide darte la vuleta",
+		String[] textoParaCaja = { "Un poder desconocido te impide darte la vuelta",
 				"La sombra se acerca más y se vuelve más nítida" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
@@ -385,7 +385,7 @@ public class Dialogo {
 	}
 
 	public static String cajaNarrador49() {
-		String[] textoParaCaja = { "El alien te asiesta un golpe" };
+		String[] textoParaCaja = { "El alien te asesta un golpe" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 

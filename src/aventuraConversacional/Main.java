@@ -575,7 +575,7 @@ public class Main {
 
 		while (opcion == 3 || opcion == 4) {
 
-			System.out.println("\n1. Revisar conbustible");
+			System.out.println("\n1. Revisar combustible");
 			System.out.println("2. Revisar cuánto tiempo queda");
 			System.out.println("3. Estudiar");
 			System.out.println("4. Jugar juegos en el móvil");
@@ -731,7 +731,7 @@ public class Main {
 
 						System.out.println("¿Qué haces?");
 						System.out.println("\n1. Pegarle con el destornillador");
-						System.out.println("2. Regarle el destornillador");
+						System.out.println("2. Regalarle el destornillador");
 						System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 						opcion = sc.nextInt();
 

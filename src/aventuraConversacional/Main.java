@@ -131,12 +131,28 @@ public class Main {
 		System.out.println(Dialogo.cajaIntroduccion());
 		System.out.println(centrarLinea("Presione START para iniciar"));
 		sc.nextLine();
-		String finalDeLaPartida = aventura();
+
+		String nombre;
+
+		// Pedimos el nombre al usuario
+		System.out.println(Recursos.casco);
+		System.out.println(Dialogo.cajaInicio());
+		System.out.println(centrarLinea("Irá su astronauta solo, ¿Cuál es su nombre?: "));
+		nombre = sc.nextLine();
+		// Si el usuario no ingreso nada, o el primer carácter del nombre no es una
+		// letra, vuelve a pedirlo hasta que el dato sea correcto
+		while (nombre.isEmpty() || !Character.isLetter(nombre.charAt(0))) {
+			System.out.println(Dialogo.cajaErrorInicio());
+			System.out.println(centrarLinea("Irá su astronauta solo, ¿Cuál es su nombre?: "));
+			nombre = sc.nextLine();
+		}
+
+		String finalDeLaPartida = aventura(nombre);
 
 		if (finalDeLaPartida.equals("perdido1")) {
 			// Texto Fin de la partida 1
 			System.out.println(Dialogo.cajaJefeMuerteRespeto1());
-			// System.out.println(Dialogo.cajaJefeMuerteRespeto2());
+			System.out.println(Dialogo.cajaJefeMuerteRespeto2(nombre));
 			System.out.println(Dialogo.cajaMuerteNarrador());
 			System.out.println(centrarLinea("Presione START para continuar"));
 			System.out.println(Recursos.despegue);
@@ -191,9 +207,8 @@ public class Main {
 		}
 	}
 
-	public static String aventura() {
+	public static String aventura(String nombre) {
 		// Declaramos las variables que vamos a usar
-		String nombre;
 		int opcion;
 		String[] inventario = new String[5];
 		int respeto = 3;
@@ -215,19 +230,6 @@ public class Main {
 		int defensaAlien = 5;
 
 		int vidas[] = { vidaProta, vidaAlien };
-
-		// Pedimos el nombre al usuario
-		System.out.println(Recursos.casco);
-		System.out.println(Dialogo.cajaInicio());
-		System.out.println(centrarLinea("Irá su astronauta solo, ¿Cuál es su nombre?: "));
-		nombre = sc.nextLine();
-		// Si el usuario no ingreso nada, o el primer caracter del nombre no es una
-		// letra, vuelve a pedirlo hasta que el dato sea correcto
-		while (nombre.isEmpty() || !Character.isLetter(nombre.charAt(0))) {
-			System.out.println(Dialogo.cajaErrorInicio());
-			System.out.println(centrarLinea("Irá su astronauta solo, ¿Cuál es su nombre?: "));
-			nombre = sc.nextLine();
-		}
 
 		// Enseñamos la caja antes de pedir el objeto, y esperamos a que el usuario
 		// presione START

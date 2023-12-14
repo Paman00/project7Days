@@ -151,8 +151,8 @@ public class Dialogo {
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
-	public static String cajaNarrador07() {
-		String[] textoParaCaja = { "¿Está al 75%, quieres avisar de esto?" };
+	public static String cajaNarrador07(int combustible) {
+		String[] textoParaCaja = { "¿Está al " + combustible + "%, quieres avisar de esto?" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
@@ -163,8 +163,7 @@ public class Dialogo {
 	}
 
 	public static String cajaNarrador09() {
-		String[] textoParaCaja = {
-				"Pero si es verdad que está más bajo de lo que recordaba… Lo llenaremos hasta el 85%.", " Gracias." };
+		String[] textoParaCaja = { "Pero si es verdad que está más bajo de lo que recordaba… Lo llenaremos hasta el 85%.", " Gracias." };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
@@ -243,7 +242,7 @@ public class Dialogo {
 
 	public static String cajaNarrador23() {
 		String[] textoParaCaja = {
-				"Después de un despegue exitoso estás en el espacio sólo, la verdad es que más tranquilo, ahora tienes que esperar 3 días hasta llegar all" };
+				"Después de un despegue exitoso estás en el espacio sólo, la verdad es que es más tranquilo, ahora tienes que esperar 3 días hasta llegar allí" };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 

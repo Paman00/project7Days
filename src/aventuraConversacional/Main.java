@@ -136,36 +136,66 @@ public class Main {
 
 		// Texto Fin de la partida 1
 		if (finalDeLaPartida.equals("perdido1")) {
+			System.out.println(centrarLinea("Presione START para continuar"));
+			sc.nextLine();
 			System.out.println(Dialogo.cajaJefeMuerteRespeto1());
 			// System.out.println(Dialogo.cajaJefeMuerteRespeto2());
 			System.out.println(Recursos.despegue);
 			System.out.println(Dialogo.cajaMuerteNarrador());
+			System.out.println(centrarLinea("Presione START para continuar"));
+			sc.nextLine();
+			System.out.println(Recursos.gameOver);
 
 			// Texto Fin de la partida 2
-		} else if (finalDeLaPartida.equals("perdido2")) { // TODO
+		} else if (finalDeLaPartida.equals("perdido2")) {
 			System.out.println(Dialogo.cajaFinal2_1());
 			System.out.println(Dialogo.cajaFinal2_2());
+			System.out.println(centrarLinea("Presione START para continuar"));
+			sc.nextLine();
+			System.out.println(Recursos.gameOver);
+			
 			// Texto Fin de la partida 3
-		} else if (finalDeLaPartida.equals("perdido3")) { // TODO
+		} else if (finalDeLaPartida.equals("perdido3")) {
+			System.out.println(centrarLinea("Presione START para continuar"));
+			sc.nextLine();
 			System.out.println(Dialogo.cajaFinal3_1());
 			System.out.println(Dialogo.cajaFinal3_2());
+			System.out.println(centrarLinea("Presione START para continuar"));
+			sc.nextLine();
+			System.out.println(Recursos.gameOver);
 
 			// Texto Fin de la partida 4
 		} else if (finalDeLaPartida.equals("perdido4")) {
 			System.out.println(Dialogo.cajaFinal4());
+			System.out.println(Recursos.finDelJuego);
 
 			// Texto Fin de la partida 5
 		} else if (finalDeLaPartida.equals("perdido5")) {
+			System.out.println(centrarLinea("Presione START para continuar"));
+			sc.nextLine();
 			System.out.println(Dialogo.cajaFinal5_1());
 			System.out.println(Dialogo.cajaFinal5_2());
+			System.out.println(centrarLinea("Presione START para continuar"));
+			sc.nextLine();
+			System.out.println(Recursos.finDelJuego);
 
 			// Texto Fin de la partida 6
 		} else if (finalDeLaPartida.equals("perdido6")) {
+			System.out.println(centrarLinea("Presione START para continuar"));
+			sc.nextLine();
 			System.out.println(Dialogo.cajaFinal6());
+			System.out.println(centrarLinea("Presione START para continuar"));
+			sc.nextLine();
+			System.out.println(Recursos.finDelJuego);
 			// Texto Fin de la partida 7
 		} else if (finalDeLaPartida.equals("perdido7")) {
+			System.out.println(centrarLinea("Presione START para continuar"));
+			sc.nextLine();
 			System.out.println(Dialogo.cajaFinal7_1());
 			System.out.println(Dialogo.cajaFinal7_2());
+			System.out.println(centrarLinea("Presione START para continuar"));
+			sc.nextLine();
+			System.out.println(Recursos.finDelJuego);
 		}
 	}
 

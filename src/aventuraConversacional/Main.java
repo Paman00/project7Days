@@ -153,7 +153,7 @@ public class Main {
 			System.out.println(centrarLinea("Presione START para continuar"));
 			sc.nextLine();
 			System.out.println(Recursos.gameOver);
-			
+
 			// Texto Fin de la partida 3
 		} else if (finalDeLaPartida.equals("perdido3")) {
 			System.out.println(centrarLinea("Presione START para continuar"));

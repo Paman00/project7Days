@@ -579,21 +579,23 @@ public class Main {
 		sc.nextLine();
 		System.out.println(Dialogo.cajaNarrador24());
 
-		while (opcion == 3 || opcion == 4) {
-
-			System.out.println("\n1. Revisar combustible");
-			System.out.println("2. Revisar cuánto tiempo queda");
-			System.out.println("3. Estudiar");
-			System.out.println("4. Jugar juegos en el móvil");
-			System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir una opción"));
+		System.out.println("\n1. Revisar combustible");
+		System.out.println("2. Revisar cuánto tiempo queda");
+		System.out.println("3. Estudiar");
+		System.out.println("4. Jugar juegos en el móvil");
+		System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir una opción"));
+		opcion = sc.nextInt();
+		
+		while (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4) {
+			System.out.println(Dialogo.cajaError2());
+			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
 			opcion = sc.nextInt();
+		}
 
-			if (opcion == 1) {
-				System.out.println(Dialogo.cajaNarrador25());
-			} else if (opcion == 2) {
-				System.out.println(Dialogo.cajaNarrador26());
-			}
-
+		if (opcion == 1) {
+			System.out.println(Dialogo.cajaNarrador25());
+		} else if (opcion == 2) {
+			System.out.println(Dialogo.cajaNarrador26());
 		}
 
 		if (opcion == 3) {
@@ -686,8 +688,10 @@ public class Main {
 		System.out.println("¿Qué harás?");
 
 		while (vidaProta > 0 && vidaAlien > 0) {
-			System.out.println("\n" + agregarColor(centrarTexto("Vida de " + nombre + ": " + vidaProta), Recursos.WHITE_BACKGROUND + Recursos.BLACK));
-			System.out.println(agregarColor(centrarTexto("Vida del alien: " + vidaAlien), Recursos.WHITE_BACKGROUND + Recursos.BLACK) + "\n");
+			System.out.println("\n" + agregarColor(centrarTexto("Vida de " + nombre + ": " + vidaProta),
+					Recursos.WHITE_BACKGROUND + Recursos.BLACK));
+			System.out.println(agregarColor(centrarTexto("Vida del alien: " + vidaAlien),
+					Recursos.WHITE_BACKGROUND + Recursos.BLACK) + "\n");
 
 			System.out.println("\n1. Luchar");
 			System.out.println("2. Hablar");
@@ -766,7 +770,7 @@ public class Main {
 						// Reset de Buffer por error
 						resetBuffer();
 					} else if (inventario[1] != null) {
-						if(inventario[1].equals("llaves")) {
+						if (inventario[1].equals("llaves")) {
 							return "final7";
 						}
 					}

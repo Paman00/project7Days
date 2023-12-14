@@ -215,9 +215,6 @@ public class Main {
 		int contadorFallo = 0;
 		String objetoInventario = null;
 		boolean objetoEncontrado = false;
-		// ! Unused variables: inteligencia, cansancio
-		int inteligencia = 0;
-		int cansancio = 0;
 
 		int contadorEspera = 0;
 
@@ -592,12 +589,10 @@ public class Main {
 
 		if (opcion == 3) {
 			System.out.println(Dialogo.cajaNarrador27());
-			inteligencia++;
 			System.out.println(
 					centrarLinea(agregarColor("La inteligencia de " + nombre + " aumenta en 1", Recursos.PURPLE)));
 		} else if (opcion == 4) {
 			System.out.println(Dialogo.cajaNarrador28());
-			cansancio++;
 			System.out.println(
 					centrarLinea(agregarColor("El cansancio de " + nombre + " aumenta en 1", Recursos.PURPLE)));
 		}
@@ -709,8 +704,6 @@ public class Main {
 			}
 
 			if (opcion == 1) {
-				// vidaAlien = realizarAtaque(nombre, vidaAlien, ataqueProta, defensaAlien);
-
 				vidas = realizarAtaque(vidaProta, ataqueProta, defensaProta, vidaAlien, ataqueAlien, defensaAlien);
 				vidaProta = vidas[0];
 				vidaAlien = vidas[1];
@@ -816,22 +809,6 @@ public class Main {
 	 */
 	public static void resetBuffer() {
 		sc.nextLine();
-	}
-
-	public static int realizarAtaque(String nombre, int vidaAlien, int ataqueProta, int defensaAlien) {
-
-		System.out.println("\n" + nombre + " ataca al alien");
-
-		int probabilidad = (int) (Math.random() * 4 + 1);
-
-		if (probabilidad == 1) {
-			System.out.println("El alien consigue defenderse por lo que tu daño se ve reducido.");
-			int resultado = vidaAlien - (ataqueProta - defensaAlien);
-			return resultado;
-		} else {
-			int resultado = vidaAlien - (ataqueProta);
-			return resultado;
-		}
 	}
 
 }

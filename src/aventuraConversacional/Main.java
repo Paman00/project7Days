@@ -10,6 +10,21 @@ public class Main {
 	private static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		// Damos la introducción al usuario y esperamos a que presione START
+		System.out.println(Dialogo.cajaIntroduccion());
+		System.out.println(centrarLinea("Presione START para iniciar"));
+		sc.nextLine();
+		String finalDeLaPartida = aventura();
+
+		if (finalDeLaPartida.equals("perdido1")) {
+			// ! No estoy seguro de que final va
+			Dialogo.cajaJefeMuerteRespeto1();
+		} else if(finalDeLaPartida.equals("")) { // TODO
+
+		} 
+	}
+
+	public static String aventura() {
 		// Declaramos las variables que vamos a usar
 		String nombre;
 		int opcion;
@@ -32,11 +47,6 @@ public class Main {
 		int defensaAlien = 5;
 
 		int vidas[] = { vidaProta, vidaAlien };
-		
-		// Damos la introducción al usuario y esperamos a que presione START
-		System.out.println(Dialogo.cajaIntroduccion());
-		System.out.println(centrarLinea("Presione START para iniciar"));
-		sc.nextLine();
 
 		// Pedimos el nombre al usuario
 		System.out.println(Recursos.casco);
@@ -186,10 +196,9 @@ public class Main {
 
 		} while (opcion != 1);
 
-		// TODO
-		// No funciona
+		// Si el respeto llega a 0, se acaba la partida y retorna el texto clave
 		if (respeto <= 0) {
-			finDeLaPartida = true;
+			return "perdido1";
 		}
 
 		System.out.println("El respeto es de " + respeto);
@@ -605,7 +614,7 @@ public class Main {
 				vidaAlien = vidas[1];
 				break;
 			case 3:
-				//escogerObjeto(inventario[]);
+				// escogerObjeto(inventario[]);
 				break;
 			case 4:
 				vidas = huir(nombre, vidaProta, ataqueProta, defensaProta, vidaAlien, ataqueAlien, defensaAlien);
@@ -622,25 +631,26 @@ public class Main {
 			// TODO añadir final
 			System.out.println("");
 		} else if (vidaAlien <= 0) {
-			
+
 			System.out.println("¿Qué haces con el cuerpo del alien?");
 			System.out.println("\n1. Dejarlo allí");
 			System.out.println("2. Llevártelo a la tierra");
 			System.out.println(centrarLinea("Ingrese 1 o 2 para elegir una opción"));
 			opcion = sc.nextInt();
-			
+
 			while (opcion != 1 && opcion != 2) {
 				System.out.println(Dialogo.cajaError3());
 				System.out.println(centrarLinea("Ingrese 1 o 2 para elegir un arma"));
 				opcion = sc.nextInt();
 			}
-			
+
 			if (opcion == 1) {
-				//TODO Final 3
-			}else if (opcion == 2) {
-				//TODO Final 4
+				// TODO Final 3
+			} else if (opcion == 2) {
+				// TODO Final 4
 			}
 		}
+		return "";
 	}
 
 	// TODO Finales
@@ -653,23 +663,18 @@ public class Main {
 	 */
 
 	/*
-	 * Texto Fin de la partida 2 
-	 * system.out.println(Dialogo.cajaFinal2_1());
+	 * Texto Fin de la partida 2 system.out.println(Dialogo.cajaFinal2_1());
 	 * system.out.println(Dialogo.cajaFinal2_2());
 	 */
-	
+
 	/*
-	 * Texto Fin de la partida 3 
-	 * System.out.println(Dialogo.cajaFinal3());
+	 * Texto Fin de la partida 3 System.out.println(Dialogo.cajaFinal3());
 	 */
-	
+
 	/*
-	 * Texto Fin de la partida 4 
-	 * System.out.println(Dialogo.cajaFinal4_1());
+	 * Texto Fin de la partida 4 System.out.println(Dialogo.cajaFinal4_1());
 	 * System.out.println(Dialogo.cajaFinal4_2());
 	 */
-	
-	
 
 	/**
 	 * Reinicia el buffer de Scanner para evitar errores con nextLine()
@@ -709,7 +714,7 @@ public class Main {
 		} else {
 			vidaAlien = vidaAlien - ataqueProta;
 		}
-		
+
 		System.out.println("La vida del alien se ve reducida a" + vidaAlien);
 
 		// Añadimos la posibilidad de que el alien ataque
@@ -727,7 +732,7 @@ public class Main {
 			} else {
 				vidaProta = vidaProta - ataqueAlien;
 			}
-			
+
 			System.out.println("Tu vida se ve reducida a" + vidaProta);
 		}
 
@@ -756,11 +761,11 @@ public class Main {
 	}
 
 	public static boolean escogerObjeto(String inventario[]) {
-		
+
 		for (int i = 0; i < inventario.length; i++) {
-			
+
 		}
-		
+
 		return false;
 
 	}

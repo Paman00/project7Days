@@ -459,7 +459,7 @@ public class Main {
 			System.out.println("\n1. Revisar inventario");
 			System.out.println("2. Revisar combustible");
 			System.out.println("3. Revisar el plan con tu jefe");
-			System.out.println("4. No");
+			System.out.println("4. Ir ya al despegue");
 			System.out.println(centrarLinea("Ingrese 1, 2, 3 o 4 para elegir una opción"));
 			opcion = sc.nextInt();
 			// Reset de Buffer por error
@@ -469,7 +469,7 @@ public class Main {
 				if (inventario[1] == null) {
 					opcion = 0;
 					System.out.println(Dialogo.cajaNarrador05(inventario));
-					System.out.println("1. Si");
+					System.out.println("1. Sí");
 					System.out.println("2. No");
 					opcion = sc.nextInt();
 					if (opcion == 1) {
@@ -483,7 +483,7 @@ public class Main {
 			} else if (opcion == 2) {
 				opcion = 0;
 				System.out.println(Dialogo.cajaNarrador07(combustible));
-				System.out.println("1. Si");
+				System.out.println("1. Sí");
 				System.out.println("2. No");
 				opcion = sc.nextInt();
 				if (opcion == 1) {

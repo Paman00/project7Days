@@ -37,7 +37,7 @@ public class Dialogo {
 
 	public static String cajaIntroduccion() {
 		String[] textoParaCaja = { "¡Hola jugador!",
-				"en esta aventura usted llevará a caba una misión en el espacio mientras se enfrenta a numerosas dificultades" };
+				"en esta aventura usted llevará a cabo una misión en el espacio mientras se enfrenta a numerosas dificultades" };
 		return modeloCajaIntroduccion(textoParaCaja);
 	}
 

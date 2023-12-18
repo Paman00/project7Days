@@ -207,7 +207,11 @@ public class FuncionesDialogo {
 	public static String bordeHorizontal(char horizontalChar, int anchoMaximo) {
 		String borde = "";
 		for (int i = 0; i < anchoMaximo; i++) {
-			borde += horizontalChar;
+			if((horizontalChar == '=') && (i == 0 || i == (anchoMaximo-1))) {
+				borde += '+';
+			} else {
+				borde += horizontalChar;
+			}
 		}
 		return borde;
 	}

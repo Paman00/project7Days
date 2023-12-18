@@ -163,7 +163,8 @@ public class Dialogo {
 	}
 
 	public static String cajaNarrador09() {
-		String[] textoParaCaja = { "Pero si es verdad que está más bajo de lo que recordaba… Lo llenaremos hasta el 85%.", " Gracias." };
+		String[] textoParaCaja = {
+				"Pero si es verdad que está más bajo de lo que recordaba… Lo llenaremos hasta el 85%.", " Gracias." };
 		return modeloCajaNarrador(textoParaCaja);
 	}
 
